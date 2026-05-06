@@ -1,0 +1,8 @@
+D:\code\FashionStoreAdmin\obj_verify\Debug\net10.0\rpswa.dswa.cache.json
+D:\code\FashionStoreAdmin\obj_verify\Debug\net10.0\FashionStoreAdmin.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\FashionStoreAdmin\obj_verify\Debug\net10.0\FashionStoreAdmin.AssemblyInfoInputs.cache
+D:\code\FashionStoreAdmin\obj_verify\Debug\net10.0\FashionStoreAdmin.AssemblyInfo.cs
+D:\code\FashionStoreAdmin\obj_verify\Debug\net10.0\FashionStoreAdmin.csproj.CoreCompileInputs.cache
+D:\code\FashionStoreAdmin\obj_verify\Debug\net10.0\FashionStoreAdmin.MvcApplicationPartsAssemblyInfo.cache
+D:\code\FashionStoreAdmin\obj_verify\Debug\net10.0\FashionStoreAdmin.RazorAssemblyInfo.cache
+D:\code\FashionStoreAdmin\obj_verify\Debug\net10.0\FashionStoreAdmin.RazorAssemblyInfo.cs

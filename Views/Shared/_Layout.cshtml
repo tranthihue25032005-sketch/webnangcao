@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Fashion Admin</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FashionStoreAdmin.styles.css" asp-append-version="true" />
+</head>
+
+<body class="gtl-body">
+    @{
+        var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+        var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+        var employeeName = Context.Session.GetString("EmployeeName") ?? "Nhân viên";
+        var employeeRole = Context.Session.GetString("EmployeeRole") ?? "Staff";
+        var isAdmin = employeeRole == "Admin";
+    }
+    <div class="gtl-wrapper">
+        <aside class="gtl-sidebar" id="gtlSidebar">
+            <div class="gtl-sidebar-header">
+                <span class="gtl-sidebar-logo"><i class="fa-solid fa-store"></i></span>
+                <span class="gtl-sidebar-title">Fashion Admin</span>
+            </div>
+            <div class="gtl-profile">
+                <img src="https://ui-avatars.com/api/?name=Admin&background=1ABB9C&color=fff&size=64" alt="" class="gtl-profile-avatar" />
+                <div class="gtl-profile-text">
+                    <span class="gtl-profile-welcome">Xin chào,</span>
+                    <span class="gtl-profile-name">@employeeName</span>
+                </div>
+            </div>
+            <div class="gtl-menu-label"><span class="gtl-menu-label-text">Chung</span></div>
+            <nav class="gtl-menu">
+                @if (isAdmin)
+                {
+                    <a class="gtl-menu-link @(currentController == "Admin" && currentAction == "Index" ? "active" : "")" asp-controller="Admin" asp-action="Index"><i class="fa-solid fa-house"></i><span class="gtl-menu-text"> Bảng điều khiển</span></a>
+                    <a class="gtl-menu-link @(currentController == "Admin" && currentAction == "Products" ? "active" : "")" asp-controller="Admin" asp-action="Products"><i class="fa-solid fa-shirt"></i><span class="gtl-menu-text"> Sản phẩm</span></a>
+                    <a class="gtl-menu-link @(currentController == "Admin" && currentAction == "Categories" ? "active" : "")" asp-controller="Admin" asp-action="Categories"><i class="fa-solid fa-list"></i><span class="gtl-menu-text"> Danh mục</span></a>
+                }
+                <a class="gtl-menu-link @(currentController == "Admin" && currentAction == "Orders" ? "active" : "")" asp-controller="Admin" asp-action="Orders"><i class="fa-solid fa-receipt"></i><span class="gtl-menu-text"> Đơn hàng</span></a>
+            </nav>
+            @if (isAdmin)
+            {
+                <div class="gtl-menu-label"><span class="gtl-menu-label-text">Hệ thống</span></div>
+                <nav class="gtl-menu">
+                    <a class="gtl-menu-link @(currentController == "Admin" && currentAction == "Employees" ? "active" : "")" asp-controller="Admin" asp-action="Employees"><i class="fa-solid fa-user-tie"></i><span class="gtl-menu-text"> Nhân viên</span></a>
+                    <a class="gtl-menu-link @(currentController == "Admin" && currentAction == "Users" ? "active" : "")" asp-controller="Admin" asp-action="Users"><i class="fa-solid fa-users"></i><span class="gtl-menu-text"> Khách & phân quyền</span></a>
+                    <a class="gtl-menu-link @(currentController == "Admin" && currentAction == "Promotions" ? "active" : "")" asp-controller="Admin" asp-action="Promotions"><i class="fa-solid fa-tags"></i><span class="gtl-menu-text"> Khuyến mãi</span></a>
+                </nav>
+            }
+            <div class="gtl-sidebar-footer">
+                <a href="#" class="gtl-footer-icon" title="Cài đặt"><i class="fa-solid fa-gear"></i></a>
+                <a href="#" class="gtl-footer-icon" title="Toàn màn hình"><i class="fa-solid fa-expand"></i></a>
+                <a href="#" class="gtl-footer-icon" title="Khóa"><i class="fa-solid fa-lock"></i></a>
+                <form asp-controller="Account" asp-action="Logout" method="post" style="display:inline;">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="gtl-footer-icon border-0 bg-transparent" title="Đăng xuất">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </button>
+            </form>
+            </div>
+        </aside>
+
+        <div class="gtl-main">
+            <header class="gtl-topbar">
+                <button type="button" class="gtl-toggle" id="gtlSidebarToggle" aria-label="Thu gọn menu"><i class="fa-solid fa-bars"></i></button>
+                <div class="gtl-topbar-right">
+                    <button type="button" class="gtl-icon-btn position-relative">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span class="gtl-badge">3</span>
+                    </button>
+                    <div class="dropdown">
+                        <button class="gtl-user-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://ui-avatars.com/api/?name=Admin&background=1ABB9C&color=fff&size=32" alt="" class="rounded-circle" width="32" height="32" />
+                            <span>@employeeName (@employeeRole)</span>
+                            <i class="fa-solid fa-chevron-down small"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                            <li><a class="dropdown-item" href="#">Hồ sơ</a></li>
+                            <li>
+                                <form asp-controller="Account" asp-action="Logout" method="post">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="dropdown-item">Đăng xuất</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="gtl-content">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        document.getElementById('gtlSidebarToggle')?.addEventListener('click', function () {
+            document.getElementById('gtlSidebar')?.classList.toggle('collapsed');
+            document.querySelector('.gtl-main')?.classList.toggle('sidebar-collapsed');
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+    @* chatbot *@
+    @* <div id="chatbox" style="position:fixed; bottom:20px; right:20px; width:300px; z-index:9999;">
+    <div style="background:#333; color:white; padding:10px; cursor:pointer;" onclick="toggleChat()">
+        Chat với shop
+    </div>
+
+    <div id="chatContent" style="display:none; background:white; border:1px solid #ccc;">
+        <div id="messages" style="height:200px; overflow:auto; padding:10px;"></div>
+
+        <input id="msgInput" style="width:70%" placeholder="Nhập tin..." />
+        <button onclick="sendMsg()">Gửi</button>
+    </div>
+    </div>
+
+    <script>
+    function toggleChat() {
+        const box = document.getElementById("chatContent");
+        box.style.display = (box.style.display === "none" || box.style.display === "")
+            ? "block"
+            : "none";
+    }
+
+    function sendMsg() {
+        const input = document.getElementById("msgInput");
+        const msg = input.value.trim();
+
+        if (!msg) return;
+
+        addMessage("Bạn", msg);
+
+        fetch('/ChatBot/Ask', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: msg })
+        })
+        .then(res => res.json())
+        .then(data => {
+            addMessage("Bot", data.reply);
+        })
+        .catch(err => {
+            addMessage("Bot", "Có lỗi xảy ra 😥");
+        });
+
+        input.value = "";
+    }
+
+    function addMessage(user, text) {
+        const div = document.createElement("div");
+        div.innerHTML = `<b>${user}:</b> ${text}`;
+        
+        const box = document.getElementById("messages");
+        box.appendChild(div);
+        box.scrollTop = box.scrollHeight;
+    }
+    </script> *@
+</body>
+</html>

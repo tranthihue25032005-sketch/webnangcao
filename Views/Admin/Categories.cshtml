@@ -1,0 +1,199 @@
+@model FashionStoreAdmin.Models.CategoryManagementViewModel
+@{
+    ViewData["Title"] = "Quản lý danh mục";
+    var parentCategories = ViewBag.ParentCategories as IReadOnlyList<FashionStoreAdmin.Models.Category> ?? [];
+}
+
+<h1 class="h3 mb-3">Quản lý danh mục</h1>
+
+<div class="row g-3">
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-white"><strong>Thêm danh mục</strong></div>
+            <div class="card-body">
+                <form asp-action="AddCategory" method="post" class="row g-3">
+                    @Html.AntiForgeryToken()
+                    <div class="col-md-6">
+                        <label class="form-label">Tên danh mục</label>
+                        <input type="text" name="name" class="form-control" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Danh mục cha</label>
+                        <select class="form-select" name="parentCategoryId">
+                            <option value="">-- Không có --</option>
+                            @foreach (var item in parentCategories)
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-label">Mô tả</label>
+                        <input type="text" name="description" class="form-control" />
+                    </div>
+                    <div class="col-md-3 d-grid">
+                        <label class="form-label">&nbsp;</label>
+                        <button type="submit" class="btn btn-primary">Thêm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-white"><strong>Thêm thương hiệu</strong></div>
+            <div class="card-body">
+                <form asp-action="AddBrand" method="post">
+                    @Html.AntiForgeryToken()
+                    <label class="form-label">Tên thương hiệu</label>
+                    <input type="text" name="name" class="form-control mb-3" required />
+                    <button type="submit" class="btn btn-dark w-100">Thêm thương hiệu</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-white"><strong>Thêm bộ sưu tập</strong></div>
+            <div class="card-body">
+                <form asp-action="AddCollection" method="post">
+                    @Html.AntiForgeryToken()
+                    <label class="form-label">Tên bộ sưu tập</label>
+                    <input type="text" name="name" class="form-control mb-2" required />
+                    <label class="form-label">Mùa</label>
+                    <input type="text" name="season" class="form-control mb-3" placeholder="Thu Đông 2026" required />
+                    <button type="submit" class="btn btn-secondary w-100">Thêm bộ sưu tập</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white"><strong>Danh mục</strong></div>
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+                        <tr>
+                            <th>Tên</th>
+                            <th>Danh mục cha</th>
+                            <th>Mô tả</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model.Categories)
+                    {
+                        var parentName = Model.Categories.FirstOrDefault(x => x.Id == item.ParentCategoryId)?.Name ?? "-";
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@parentName</td>
+                            <td>@item.Description</td>
+                            <td class="d-flex gap-1">
+                                <button
+                                    type="button"
+                                    class="btn btn-sm btn-outline-primary btn-edit-category"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#editCategoryModal"
+                                    data-id="@item.Id"
+                                    data-name="@item.Name"
+                                    data-description="@item.Description"
+                                    data-parentid="@item.ParentCategoryId">
+                                    Sửa
+                                </button>
+                                <form asp-action="DeleteCategory" method="post" onsubmit="return confirm('Xóa danh mục này?');">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@item.Id" />
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">Xóa</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white"><strong>Thương hiệu</strong></div>
+            <ul class="list-group list-group-flush">
+                @foreach (var brand in Model.Brands)
+                {
+                    <li class="list-group-item">@brand.Name</li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white"><strong>Bộ sưu tập</strong></div>
+            <ul class="list-group list-group-flush">
+                @foreach (var collection in Model.Collections)
+                {
+                    <li class="list-group-item">
+                        <div>@collection.Name</div>
+                        <div class="small text-muted">@collection.Season</div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editCategoryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="UpdateCategory" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title">Sửa danh mục</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="Id" id="edit-category-id" />
+                    <div class="mb-3">
+                        <label class="form-label">Tên danh mục</label>
+                        <input type="text" name="Name" id="edit-category-name" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Danh mục cha</label>
+                        <select class="form-select" name="ParentCategoryId" id="edit-category-parent">
+                            <option value="">-- Không có --</option>
+                            @foreach (var item in parentCategories)
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div>
+                        <label class="form-label">Mô tả</label>
+                        <input type="text" name="Description" id="edit-category-description" class="form-control" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        (() => {
+            const buttons = document.querySelectorAll('.btn-edit-category');
+            for (const btn of buttons) {
+                btn.addEventListener('click', () => {
+                    document.getElementById('edit-category-id').value = btn.dataset.id || '';
+                    document.getElementById('edit-category-name').value = btn.dataset.name || '';
+                    document.getElementById('edit-category-description').value = btn.dataset.description || '';
+                    document.getElementById('edit-category-parent').value = btn.dataset.parentid || '';
+                });
+            }
+        })();
+    </script>
+}

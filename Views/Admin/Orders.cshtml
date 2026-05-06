@@ -1,0 +1,116 @@
+@model IReadOnlyList<FashionStoreAdmin.Models.ClientOrder>
+@{
+    ViewData["Title"] = "Quản lý đơn hàng";
+    string HienThiTrangThai(FashionStoreAdmin.Models.OrderStatus status) => status switch
+{
+    FashionStoreAdmin.Models.OrderStatus.Pending => "Chờ xác nhận",
+    FashionStoreAdmin.Models.OrderStatus.Confirmed => "Đã xác nhận",
+    FashionStoreAdmin.Models.OrderStatus.Picking => "Đang chuẩn bị hàng",
+    FashionStoreAdmin.Models.OrderStatus.Shipping => "Đang giao",
+    FashionStoreAdmin.Models.OrderStatus.Completed => "Đã giao",
+    FashionStoreAdmin.Models.OrderStatus.Cancelled => "Đã hủy",
+    _ => "Không xác định"
+};
+}
+
+<h1 class="h3 mb-3">Quản lý đơn hàng</h1>
+
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-header bg-white"><strong>Tạo đơn hàng mới</strong></div>
+    <div class="card-body">
+        <form asp-action="AddOrder" method="post" class="row g-3">
+            @Html.AntiForgeryToken()
+            <div class="col-md-4">
+                <label class="form-label">Tên khách hàng</label>
+                <input name="customerName" class="form-control" required />
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Tổng tiền</label>
+                <input type="number" min="0" name="totalAmount" class="form-control" required />
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Trạng thái</label>
+                <select name="status" class="form-select">
+                    <option value="@FashionStoreAdmin.Models.OrderStatus.Pending">Chờ xác nhận</option>
+                    <option value="@FashionStoreAdmin.Models.OrderStatus.Shipping">Đang giao</option>
+                    <option value="@FashionStoreAdmin.Models.OrderStatus.Completed">Đã giao</option>
+                    <option value="@FashionStoreAdmin.Models.OrderStatus.Cancelled">Đã hủy</option>
+                </select>
+            </div>
+            <div class="col-md-2 d-grid">
+                <label class="form-label">&nbsp;</label>
+                <button class="btn btn-primary" type="submit">Thêm</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="table-responsive">
+        <table class="table table-striped mb-0">
+            <thead>
+                <tr>
+                    <th>Mã đơn</th>
+                    <th>Thông tin khách</th>
+                    <th>Sản phẩm đã mua</th>
+                    <th>Ngày đặt</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                    <th>Chi tiết</th>
+                    <th>Xác nhận đơn</th>
+                    <th>Cập nhật trạng thái</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                var boughtProducts = string.Join(", ",
+                    item.OrderDetails.Select(i => $"{i.ProductName} ({i.Size}/{i.Color}) x{i.Quantity}")
+                );
+                <tr>
+                    <td>#@item.Id</td>
+                    <td>
+                        <div class="fw-semibold">@item.CustomerName</div>
+                        <div class="small text-muted">@item.PhoneNumber</div>
+                        <div class="small text-muted">@item.ShippingAddress</div>
+                    </td>
+                    <td class="small">@boughtProducts</td>
+                    <td>@item.OrderDate.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@item.TotalAmount.ToString("N0") VND</td>
+                    <td><span class="badge text-bg-info">@HienThiTrangThai(item.Status)</span></td>
+                    <td>
+                        <a class="btn btn-sm btn-outline-dark" asp-action="OrderDetail" asp-route-id="@item.Id">Xem</a>
+                    </td>
+                    <td>
+                        @if (item.Status == FashionStoreAdmin.Models.OrderStatus.Pending)
+                        {
+                            <form asp-action="ConfirmOrder" method="post">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="orderId" value="@item.Id" />
+                                <button class="btn btn-sm btn-success">Xác nhận đơn</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <span class="text-muted small">Đã xác nhận</span>
+                        }
+                    </td>
+                    <td>
+                        <form asp-action="UpdateOrderStatus" method="post" class="d-flex gap-2">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="orderId" value="@item.Id" />
+                            <select class="form-select form-select-sm" name="status">
+                                <option value="@FashionStoreAdmin.Models.OrderStatus.Pending">Chờ xác nhận</option>
+                                <option value="@FashionStoreAdmin.Models.OrderStatus.Shipping">Đang giao</option>
+                                <option value="@FashionStoreAdmin.Models.OrderStatus.Completed">Đã giao</option>
+                                <option value="@FashionStoreAdmin.Models.OrderStatus.Cancelled">Đã hủy</option>
+                            </select>
+                            <button class="btn btn-sm btn-primary">Lưu</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

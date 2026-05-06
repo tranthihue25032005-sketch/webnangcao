@@ -1,0 +1,108 @@
+@model FashionStoreAdmin.Models.UserManagementViewModel
+@{
+    ViewData["Title"] = "Khách hàng và phân quyền";
+}
+
+<h1 class="h3 mb-3">Quản lý khách hàng</h1>
+
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-header bg-white"><strong>Tạo tài khoản nội bộ</strong></div>
+    <div class="card-body">
+        <form asp-action="AddInternalUser" method="post" class="row g-3">
+            @Html.AntiForgeryToken()
+            <div class="col-md-4">
+                <label class="form-label">Họ tên</label>
+                <input name="fullName" class="form-control" required />
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" required />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Số điện thoại</label>
+                <input name="phoneNumber" class="form-control" required />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Vai trò</label>
+                <select name="role" class="form-select">
+                    @* <option value="@FashionStoreAdmin.Models.UserRole.Admin">Admin</option>
+                    
+                    <option value="@FashionStoreAdmin.Models.UserRole.Sale">Nhân viên</option> *@
+                    <option value="@FashionStoreAdmin.Models.UserRole.Staff">Khách Hàng</option>
+                </select>
+            </div>
+            <div class="col-md-12 d-grid">
+                <label class="form-label">&nbsp;</label>
+                <button class="btn btn-primary" type="submit">Tạo tài khoản</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="table-responsive">
+        <table class="table table-striped mb-0">
+            <thead>
+                <tr>
+                    <th>Họ tên</th>
+                    <th>Email / Số điện thoại</th>
+                    <th>Vai trò</th>
+                    <th>Lịch sử mua hàng</th>
+                    <th>Trạng thái tài khoản</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var row in Model.Users)
+            {
+                var user = row.User;
+                <tr>
+                    <td>@user.FullName</td>
+                    <td>
+                        <div>@user.Email</div>
+                        <div class="small text-muted">@user.PhoneNumber</div>
+                    </td>
+                    <td>
+    @(user.Role switch
+    {
+        @* FashionStoreAdmin.Models.UserRole.Admin => "Admin", *@
+        FashionStoreAdmin.Models.UserRole.Staff => "Khách hàng",
+        @* FashionStoreAdmin.Models.UserRole.Sale => "Nhân viên", *@
+        _ => "Không xác định"
+    })
+</td>
+                    <td>
+                        @if (row.PurchaseHistory.Count == 0)
+                        {
+                            <span class="text-muted">Chưa có đơn</span>
+                        }
+                        else
+                        {
+                            <div class="small">
+                                @foreach (var order in row.PurchaseHistory.Take(3))
+                                {
+                                    <div>#@order.OrderId - @order.OrderDate.ToString("dd/MM/yyyy") - @order.TotalAmount.ToString("N0") VND (@order.StatusText)</div>
+                                }
+                                @if (row.PurchaseHistory.Count > 3)
+                                {
+                                    <div class="text-muted">... và @(row.PurchaseHistory.Count - 3) đơn khác</div>
+                                }
+                            </div>
+                        }
+                    </td>
+                    <td>@(user.IsLocked ? "Đã khóa" : "Đang hoạt động")</td>
+                    <td>
+                        <form asp-action="ToggleUserLock" method="post">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="userId" value="@user.Id" />
+                            <button class="btn btn-sm @(user.IsLocked ? "btn-success" : "btn-outline-danger")">
+                                @(user.IsLocked ? "Mở khóa" : "Khóa")
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

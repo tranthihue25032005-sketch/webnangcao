@@ -1,0 +1,37 @@
+@model FashionStoreAdmin.Models.CartSuccessViewModel
+@{
+    ViewData["Title"] = "Thành công";
+}
+
+<h1 class="h3 mb-3">Đặt hàng thành công</h1>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body">
+        <p class="mb-2">Cảm ơn bạn đã mua hàng.</p>
+        <div class="d-flex flex-wrap gap-3">
+            <div>
+                <div class="text-muted small">Mã đơn</div>
+                <div class="fw-bold">#@Model.OrderId</div>
+            </div>
+            <div>
+                <div class="text-muted small">Tổng tiền</div>
+                <div class="text-danger fw-bold">@Model.TotalAmount.ToString("N0") VND</div>
+            </div>
+            <div>
+                <div class="text-muted small">Trạng thái</div>
+                <div class="fw-bold">@Model.Status</div>
+            </div>
+            <div>
+                <div class="text-muted small">Thanh toán</div>
+                <div class="fw-bold">@Model.PaymentMethod</div>
+            </div>
+        </div>
+
+        <hr />
+        <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-primary" asp-controller="Client" asp-action="Products">Tiếp tục mua hàng</a>
+            <a class="btn btn-outline-dark" asp-controller="Client" asp-action="Orders">Về đơn hàng của tôi</a>
+        </div>
+    </div>
+</div>
+

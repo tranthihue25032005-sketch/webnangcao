@@ -1,0 +1,75 @@
+@model FashionStoreAdmin.Models.ClientProductDetailViewModel
+@{
+    ViewData["Title"] = "Chi tiết sản phẩm";
+    var firstImage = Model.Images.FirstOrDefault()?.ImageUrl ?? $"https://picsum.photos/seed/p-{Model.Product.Id}/800/560";
+}
+
+<div class="row g-4">
+    <div class="col-md-6">
+        <img src="@firstImage" class="img-fluid rounded-3 mb-2" alt="@Model.Product.Name" />
+        @if (Model.Images.Count > 1)
+        {
+            <div class="d-flex gap-2 flex-wrap">
+                @foreach (var image in Model.Images)
+                {
+                    <img src="@image.ImageUrl" class="rounded" width="100" height="70" style="object-fit:cover" alt="@image.Caption" />
+                }
+            </div>
+        }
+    </div>
+    <div class="col-md-6">
+        <h1 class="h3">@Model.Product.Name</h1>
+        <p class="text-muted mb-1">Danh mục: @Model.Category?.Name</p>
+        <p>@Model.Product.Description</p>
+        <div class="mb-3">
+            <span class="text-secondary text-decoration-line-through me-2">@Model.Product.OriginalPrice.ToString("N0") VND</span>
+            <span class="text-danger fs-4 fw-bold">@Model.Product.Price.ToString("N0") VND</span>
+        </div>
+
+        <form asp-action="AddToCart" method="post" class="card border-0 shadow-sm p-3">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="productId" value="@Model.Product.Id" />
+            <div class="row g-2">
+                <div class="col-md-4">
+                    <label class="form-label">Size</label>
+                    <select class="form-select" name="size">
+                        @if (Model.Variants.Count == 0)
+                        {
+                            <option value="@Model.Product.Size">@Model.Product.Size</option>
+                        }
+                        else
+                        {
+                            foreach (var size in Model.Variants.Select(v => v.Size).Distinct())
+                            {
+                                <option value="@size">@size</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Màu</label>
+                    <select class="form-select" name="color">
+                        @if (Model.Variants.Count == 0)
+                        {
+                            <option value="@Model.Product.Color">@Model.Product.Color</option>
+                        }
+                        else
+                        {
+                            foreach (var color in Model.Variants.Select(v => v.Color).Distinct())
+                            {
+                                <option value="@color">@color</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Số lượng</label>
+                    <input type="number" class="form-control" name="quantity" value="1" min="1" />
+                </div>
+            </div>
+            <button class="btn btn-primary mt-3" type="submit">
+                <i class="fa-solid fa-cart-plus me-1"></i>Thêm vào giỏ
+            </button>
+        </form>
+    </div>
+</div>

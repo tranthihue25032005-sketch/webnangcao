@@ -1,0 +1,48 @@
+@model FashionStoreAdmin.Models.CheckoutViewModel
+@{
+    ViewData["Title"] = "Thanh toán";
+}
+
+<h1 class="h3 mb-3">Thanh toán</h1>
+
+<div class="row g-4">
+    <div class="col-md-7">
+        <form asp-action="Checkout" method="post" class="card border-0 shadow-sm">
+            <div class="card-body">
+                @Html.AntiForgeryToken()
+                <div class="mb-3">
+                    <label class="form-label">Tên người nhận</label>
+                    <input class="form-control" name="CustomerName" value="@Model.CustomerName" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">SĐT</label>
+                    <input class="form-control" name="PhoneNumber" value="@Model.PhoneNumber" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Địa chỉ</label>
+                    <textarea class="form-control" name="Address" rows="3" required>@Model.Address</textarea>
+                </div>
+                <button class="btn btn-primary">Đặt hàng</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white"><strong>Đơn hàng của bạn</strong></div>
+            <div class="card-body">
+                @foreach (var item in Model.Cart.Items)
+                {
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>@item.ProductName x @item.Quantity</span>
+                        <span>@((item.UnitPrice * item.Quantity).ToString("N0"))</span>
+                    </div>
+                }
+                <hr />
+                <div class="d-flex justify-content-between fw-bold text-danger">
+                    <span>Tổng cộng</span>
+                    <span>@Model.Cart.TotalAmount.ToString("N0") VND</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

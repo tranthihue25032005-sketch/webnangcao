@@ -1,0 +1,81 @@
+@model FashionStoreAdmin.Models.PromotionManagementViewModel
+@{
+    ViewData["Title"] = "Quản lý khuyến mãi";
+    string HienThiLoai(FashionStoreAdmin.Models.PromotionType type) => type switch
+    {
+        FashionStoreAdmin.Models.PromotionType.Percent => "Giảm theo %",
+        FashionStoreAdmin.Models.PromotionType.FixedAmount => "Giảm số tiền cố định",
+        FashionStoreAdmin.Models.PromotionType.FreeShipping => "Miễn phí giao hàng",
+        _ => type.ToString()
+    };
+}
+
+<h1 class="h3 mb-3">Quản lý khuyến mãi và voucher</h1>
+
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-header bg-white"><strong>Tạo mã giảm giá mới</strong></div>
+    <div class="card-body">
+        <form asp-action="AddPromotion" method="post" class="row g-3">
+            @Html.AntiForgeryToken()
+            <div class="col-md-2">
+                <label class="form-label">Mã</label>
+                <input name="code" class="form-control" required />
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Loại khuyến mãi</label>
+                <select class="form-select" name="type">
+                    <option value="@FashionStoreAdmin.Models.PromotionType.Percent">Giảm theo %</option>
+                    <option value="@FashionStoreAdmin.Models.PromotionType.FixedAmount">Giảm số tiền</option>
+                    <option value="@FashionStoreAdmin.Models.PromotionType.FreeShipping">Miễn phí giao hàng</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Giá trị</label>
+                <input type="number" min="0" name="value" class="form-control" required />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Ngày bắt đầu</label>
+                <input type="date" name="startDate" class="form-control" required />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Ngày kết thúc</label>
+                <input type="date" name="endDate" class="form-control" required />
+            </div>
+            <div class="col-md-1">
+                <label class="form-label">Số lượt</label>
+                <input type="number" min="1" name="maxUse" class="form-control" required />
+            </div>
+            <div class="col-md-12 d-grid">
+                <button class="btn btn-primary" type="submit">Tạo mã khuyến mãi</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="table-responsive">
+        <table class="table table-striped mb-0">
+            <thead>
+                <tr>
+                    <th>Mã</th>
+                    <th>Loại</th>
+                    <th>Giá trị</th>
+                    <th>Thời gian</th>
+                    <th>Đã dùng / Giới hạn</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.Promotions)
+            {
+                <tr>
+                    <td>@item.Code</td>
+                    <td>@HienThiLoai(item.Type)</td>
+                    <td>@item.Value</td>
+                    <td>@item.StartDate.ToString("dd/MM/yyyy") - @item.EndDate.ToString("dd/MM/yyyy")</td>
+                    <td>@item.UsedCount / @item.MaxUse</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

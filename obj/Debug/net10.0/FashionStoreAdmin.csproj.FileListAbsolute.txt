@@ -1,0 +1,535 @@
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\appsettings.Development.json
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\appsettings.json
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.staticwebassets.runtime.json
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.staticwebassets.endpoints.json
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.exe
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.deps.json
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.runtimeconfig.json
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.pdb
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.AssemblyInfoInputs.cache
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.AssemblyInfo.cs
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.csproj.CoreCompileInputs.cache
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.MvcApplicationPartsAssemblyInfo.cache
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.RazorAssemblyInfo.cache
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.RazorAssemblyInfo.cs
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\rjimswa.dswa.cache.json
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\scopedcss\bundle\FashionStoreAdmin.styles.css
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\scopedcss\projectbundle\FashionStoreAdmin.bundle.scp.css
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\sznerlrscd-{0}-61n19gt1b8-61n19gt1b8.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\8m9tkgio0t-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\du8796ph6r-{0}-bqjiyaj88i-bqjiyaj88i.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\pd4c4ml6a1-{0}-c2jlpeoesf-c2jlpeoesf.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\pev7cx7b70-{0}-erw9l3u2r3-erw9l3u2r3.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\zhy3rdopfn-{0}-aexeepp0ev-aexeepp0ev.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\6by3gebrns-{0}-d7shbmvgxk-d7shbmvgxk.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\k8l7lvarev-{0}-ausgxo2sd3-ausgxo2sd3.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\g3zbngebpq-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\1lwwkk65ux-{0}-cosvhxvwiu-cosvhxvwiu.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ljpcn34kkf-{0}-ub07r2b239-ub07r2b239.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\fllhouh24u-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\m4ddusfqhx-{0}-b7pk76d08c-b7pk76d08c.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\r3yeir9o1q-{0}-fsbi9cje9m-fsbi9cje9m.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\4x9ry0qqed-{0}-rzd6atqjts-rzd6atqjts.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\a4nqjpf7ym-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\voq46mn0bi-{0}-dxx9fxp4il-dxx9fxp4il.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\rmnthkurie-{0}-jd9uben2k1-jd9uben2k1.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\l6ih5754ca-{0}-khv3u5hwcm-khv3u5hwcm.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\vyhulslly1-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\b9d3vfxr08-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\foisdmdbiz-{0}-c2oey78nd0-c2oey78nd0.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\s5segv2yns-{0}-tdbxkamptv-tdbxkamptv.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\rty6adzbwy-{0}-j5mq2jizvt-j5mq2jizvt.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ysg92d9kza-{0}-06098lyss8-06098lyss8.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\d7orvnpgnk-{0}-nvvlpmu67g-nvvlpmu67g.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\pkl3fqzt4x-{0}-s35ty4nyc5-s35ty4nyc5.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\h1etv32u5s-{0}-pj5nd1wqec-pj5nd1wqec.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\zhbu8okp2l-{0}-46ein0sx1k-46ein0sx1k.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ucgbv0a8x6-{0}-v0zj4ognzu-v0zj4ognzu.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\q3sxjah41d-{0}-37tfw0ft22-37tfw0ft22.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\9kwvnz3txq-{0}-hrwsygsryq-hrwsygsryq.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\sz1ihutd72-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\jyl5crbtig-{0}-ft3s53vfgj-ft3s53vfgj.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\hrnscchhm9-{0}-6cfz1n2cew-6cfz1n2cew.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\68e71moh4o-{0}-6pdc2jztkx-6pdc2jztkx.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\58miny1470-{0}-493y06b0oq-493y06b0oq.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\5a49nij77z-{0}-iovd86k7lj-iovd86k7lj.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ei3fysjy5w-{0}-vr1egmr9el-vr1egmr9el.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\thskmohwfu-{0}-kbrnm935zg-kbrnm935zg.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\dob7hqhje0-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\3ghpas049o-{0}-y7v9cxd14o-y7v9cxd14o.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ivqqeq5u69-{0}-notf2xhcfb-notf2xhcfb.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ccl7qc9p9r-{0}-h1s4sie4z3-h1s4sie4z3.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\662tdjcm8o-{0}-63fj8s7r0e-63fj8s7r0e.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\rv79njraoh-{0}-0j3bgjxly4-0j3bgjxly4.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\eljmwhekda-{0}-47otxtyo56-47otxtyo56.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\kqit5o15pw-{0}-4v8eqarkd7-4v8eqarkd7.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\yblq4wu78m-{0}-356vix0kms-356vix0kms.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\dx1ezf6y17-{0}-83jwlth58m-83jwlth58m.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\a21nzj0mha-{0}-mrlpezrjn3-mrlpezrjn3.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\e3sd0qt9m0-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\umobpr2f4b-{0}-ag7o75518u-ag7o75518u.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\9q2g4ajeiw-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ccjgpsmsc8-{0}-0i3buxo5is-0i3buxo5is.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\vr4eifrk9n-{0}-o1o13a6vjx-o1o13a6vjx.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\pn722aboyx-{0}-ttgo8qnofa-ttgo8qnofa.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\g3zdrs9vsy-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\5bfiq8c252-{0}-muycvpuwrr-muycvpuwrr.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\eziabhgykr-{0}-87fc7y1x7t-87fc7y1x7t.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\mi58d99c3l-{0}-mlv21k5csn-mlv21k5csn.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\vsnvsqg3le-{0}-1r5p1ta0ej-1r5p1ta0ej.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\4vd6owpo89-{0}-1r5p1ta0ej-1r5p1ta0ej.gz
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\staticwebassets.build.json
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\staticwebassets.build.json.cache
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\staticwebassets.development.json
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\swae.build.ex.cache
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.dll
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\refint\FashionStoreAdmin.dll
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.pdb
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.genruntimeconfig.cache
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\ref\FashionStoreAdmin.dll
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\jv521v5w1v-{0}-yqv3360hwx-yqv3360hwx.gz
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Data.Sqlite.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Win32.SystemEvents.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\QRCoder.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\SQLitePCLRaw.batteries_v2.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\SQLitePCLRaw.core.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\System.Drawing.Common.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\browser-wasm\nativeassets\net9.0\e_sqlite3.a
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-arm\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-arm64\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-armel\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-mips64\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-riscv64\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-s390x\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-riscv64\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-s390x\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-x64\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-x86\native\libe_sqlite3.so
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-arm\native\e_sqlite3.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-arm64\native\e_sqlite3.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.csproj.AssemblyReference.cache
+D:\code\FashionStoreAdmin\obj\Debug\net10.0\FashionS.B93722BB.Up2Date
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\appsettings.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.staticwebassets.endpoints.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.staticwebassets.runtime.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.exe
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.deps.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.runtimeconfig.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.pdb
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Data.Sqlite.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\QRCoder.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\SQLitePCLRaw.core.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\System.Drawing.Common.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\browser-wasm\nativeassets\net9.0\e_sqlite3.a
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-riscv64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-s390x\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-riscv64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.csproj.AssemblyReference.cache
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.AssemblyInfoInputs.cache
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.AssemblyInfo.cs
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.csproj.CoreCompileInputs.cache
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.RazorAssemblyInfo.cache
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.RazorAssemblyInfo.cs
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\scopedcss\bundle\FashionStoreAdmin.styles.css
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\scopedcss\projectbundle\FashionStoreAdmin.bundle.scp.css
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\jv521v5w1v-{0}-yqv3360hwx-yqv3360hwx.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\sznerlrscd-{0}-61n19gt1b8-61n19gt1b8.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\8m9tkgio0t-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\du8796ph6r-{0}-bqjiyaj88i-bqjiyaj88i.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\pd4c4ml6a1-{0}-c2jlpeoesf-c2jlpeoesf.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\pev7cx7b70-{0}-erw9l3u2r3-erw9l3u2r3.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\zhy3rdopfn-{0}-aexeepp0ev-aexeepp0ev.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\6by3gebrns-{0}-d7shbmvgxk-d7shbmvgxk.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\k8l7lvarev-{0}-ausgxo2sd3-ausgxo2sd3.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\g3zbngebpq-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\1lwwkk65ux-{0}-cosvhxvwiu-cosvhxvwiu.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ljpcn34kkf-{0}-ub07r2b239-ub07r2b239.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\fllhouh24u-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\m4ddusfqhx-{0}-b7pk76d08c-b7pk76d08c.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\r3yeir9o1q-{0}-fsbi9cje9m-fsbi9cje9m.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\4x9ry0qqed-{0}-rzd6atqjts-rzd6atqjts.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\a4nqjpf7ym-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\voq46mn0bi-{0}-dxx9fxp4il-dxx9fxp4il.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\rmnthkurie-{0}-jd9uben2k1-jd9uben2k1.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\l6ih5754ca-{0}-khv3u5hwcm-khv3u5hwcm.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\vyhulslly1-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\b9d3vfxr08-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\foisdmdbiz-{0}-c2oey78nd0-c2oey78nd0.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\s5segv2yns-{0}-tdbxkamptv-tdbxkamptv.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\rty6adzbwy-{0}-j5mq2jizvt-j5mq2jizvt.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ysg92d9kza-{0}-06098lyss8-06098lyss8.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\d7orvnpgnk-{0}-nvvlpmu67g-nvvlpmu67g.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\pkl3fqzt4x-{0}-s35ty4nyc5-s35ty4nyc5.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\h1etv32u5s-{0}-pj5nd1wqec-pj5nd1wqec.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\zhbu8okp2l-{0}-46ein0sx1k-46ein0sx1k.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ucgbv0a8x6-{0}-v0zj4ognzu-v0zj4ognzu.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\q3sxjah41d-{0}-37tfw0ft22-37tfw0ft22.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\9kwvnz3txq-{0}-hrwsygsryq-hrwsygsryq.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\sz1ihutd72-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\jyl5crbtig-{0}-ft3s53vfgj-ft3s53vfgj.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\hrnscchhm9-{0}-6cfz1n2cew-6cfz1n2cew.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\68e71moh4o-{0}-6pdc2jztkx-6pdc2jztkx.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\58miny1470-{0}-493y06b0oq-493y06b0oq.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\5a49nij77z-{0}-iovd86k7lj-iovd86k7lj.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ei3fysjy5w-{0}-vr1egmr9el-vr1egmr9el.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\thskmohwfu-{0}-kbrnm935zg-kbrnm935zg.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\dob7hqhje0-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\3ghpas049o-{0}-y7v9cxd14o-y7v9cxd14o.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ivqqeq5u69-{0}-notf2xhcfb-notf2xhcfb.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ccl7qc9p9r-{0}-h1s4sie4z3-h1s4sie4z3.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\662tdjcm8o-{0}-63fj8s7r0e-63fj8s7r0e.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\rv79njraoh-{0}-0j3bgjxly4-0j3bgjxly4.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\eljmwhekda-{0}-47otxtyo56-47otxtyo56.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\kqit5o15pw-{0}-4v8eqarkd7-4v8eqarkd7.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\yblq4wu78m-{0}-356vix0kms-356vix0kms.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\dx1ezf6y17-{0}-83jwlth58m-83jwlth58m.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\a21nzj0mha-{0}-mrlpezrjn3-mrlpezrjn3.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\e3sd0qt9m0-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\umobpr2f4b-{0}-ag7o75518u-ag7o75518u.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\9q2g4ajeiw-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ccjgpsmsc8-{0}-0i3buxo5is-0i3buxo5is.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\vr4eifrk9n-{0}-o1o13a6vjx-o1o13a6vjx.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\pn722aboyx-{0}-ttgo8qnofa-ttgo8qnofa.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\g3zdrs9vsy-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\5bfiq8c252-{0}-muycvpuwrr-muycvpuwrr.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\eziabhgykr-{0}-87fc7y1x7t-87fc7y1x7t.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\mi58d99c3l-{0}-mlv21k5csn-mlv21k5csn.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\vsnvsqg3le-{0}-1r5p1ta0ej-1r5p1ta0ej.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\4vd6owpo89-{0}-1r5p1ta0ej-1r5p1ta0ej.gz
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\staticwebassets.development.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\FashionS.B93722BB.Up2Date
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\refint\FashionStoreAdmin.dll
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.pdb
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.genruntimeconfig.cache
+C:\Users\Hue ngoc\Downloads\code\code\FashionStoreAdmin\obj\Debug\net10.0\ref\FashionStoreAdmin.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\appsettings.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.staticwebassets.runtime.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.staticwebassets.endpoints.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.exe
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.deps.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.runtimeconfig.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\FashionStoreAdmin.pdb
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Azure.Core.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Azure.Identity.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\BCrypt.Net-Next.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Humanizer.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Data.Sqlite.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Identity.Client.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Mono.TextTemplating.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\QRCoder.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\SQLitePCLRaw.core.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\System.ClientModel.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\System.CodeDom.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\System.Composition.Convention.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\System.Composition.Hosting.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\System.Composition.Runtime.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\System.Composition.TypedParts.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\System.Drawing.Common.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\System.Memory.Data.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\browser-wasm\nativeassets\net9.0\e_sqlite3.a
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-riscv64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-s390x\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-riscv64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-s390x\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\bin\Debug\net10.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.csproj.AssemblyReference.cache
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.AssemblyInfoInputs.cache
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.AssemblyInfo.cs
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.csproj.CoreCompileInputs.cache
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.RazorAssemblyInfo.cache
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.RazorAssemblyInfo.cs
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\scopedcss\bundle\FashionStoreAdmin.styles.css
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\scopedcss\projectbundle\FashionStoreAdmin.bundle.scp.css
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\jv521v5w1v-{0}-yqv3360hwx-yqv3360hwx.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\sznerlrscd-{0}-61n19gt1b8-61n19gt1b8.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\8m9tkgio0t-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\du8796ph6r-{0}-bqjiyaj88i-bqjiyaj88i.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\pd4c4ml6a1-{0}-c2jlpeoesf-c2jlpeoesf.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\pev7cx7b70-{0}-erw9l3u2r3-erw9l3u2r3.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\zhy3rdopfn-{0}-aexeepp0ev-aexeepp0ev.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\6by3gebrns-{0}-d7shbmvgxk-d7shbmvgxk.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\k8l7lvarev-{0}-ausgxo2sd3-ausgxo2sd3.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\g3zbngebpq-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\1lwwkk65ux-{0}-cosvhxvwiu-cosvhxvwiu.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ljpcn34kkf-{0}-ub07r2b239-ub07r2b239.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\fllhouh24u-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\m4ddusfqhx-{0}-b7pk76d08c-b7pk76d08c.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\r3yeir9o1q-{0}-fsbi9cje9m-fsbi9cje9m.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\4x9ry0qqed-{0}-rzd6atqjts-rzd6atqjts.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\a4nqjpf7ym-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\voq46mn0bi-{0}-dxx9fxp4il-dxx9fxp4il.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\rmnthkurie-{0}-jd9uben2k1-jd9uben2k1.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\l6ih5754ca-{0}-khv3u5hwcm-khv3u5hwcm.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\vyhulslly1-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\b9d3vfxr08-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\foisdmdbiz-{0}-c2oey78nd0-c2oey78nd0.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\s5segv2yns-{0}-tdbxkamptv-tdbxkamptv.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\rty6adzbwy-{0}-j5mq2jizvt-j5mq2jizvt.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ysg92d9kza-{0}-06098lyss8-06098lyss8.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\d7orvnpgnk-{0}-nvvlpmu67g-nvvlpmu67g.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\pkl3fqzt4x-{0}-s35ty4nyc5-s35ty4nyc5.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\h1etv32u5s-{0}-pj5nd1wqec-pj5nd1wqec.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\zhbu8okp2l-{0}-46ein0sx1k-46ein0sx1k.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ucgbv0a8x6-{0}-v0zj4ognzu-v0zj4ognzu.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\q3sxjah41d-{0}-37tfw0ft22-37tfw0ft22.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\9kwvnz3txq-{0}-hrwsygsryq-hrwsygsryq.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\sz1ihutd72-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\jyl5crbtig-{0}-ft3s53vfgj-ft3s53vfgj.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\hrnscchhm9-{0}-6cfz1n2cew-6cfz1n2cew.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\68e71moh4o-{0}-6pdc2jztkx-6pdc2jztkx.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\58miny1470-{0}-493y06b0oq-493y06b0oq.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\5a49nij77z-{0}-iovd86k7lj-iovd86k7lj.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ei3fysjy5w-{0}-vr1egmr9el-vr1egmr9el.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\thskmohwfu-{0}-kbrnm935zg-kbrnm935zg.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\dob7hqhje0-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\3ghpas049o-{0}-y7v9cxd14o-y7v9cxd14o.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ivqqeq5u69-{0}-notf2xhcfb-notf2xhcfb.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ccl7qc9p9r-{0}-h1s4sie4z3-h1s4sie4z3.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\662tdjcm8o-{0}-63fj8s7r0e-63fj8s7r0e.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\rv79njraoh-{0}-0j3bgjxly4-0j3bgjxly4.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\eljmwhekda-{0}-47otxtyo56-47otxtyo56.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\kqit5o15pw-{0}-4v8eqarkd7-4v8eqarkd7.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\yblq4wu78m-{0}-356vix0kms-356vix0kms.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\dx1ezf6y17-{0}-83jwlth58m-83jwlth58m.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\a21nzj0mha-{0}-mrlpezrjn3-mrlpezrjn3.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\e3sd0qt9m0-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\umobpr2f4b-{0}-ag7o75518u-ag7o75518u.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\9q2g4ajeiw-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\ccjgpsmsc8-{0}-0i3buxo5is-0i3buxo5is.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\vr4eifrk9n-{0}-o1o13a6vjx-o1o13a6vjx.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\pn722aboyx-{0}-ttgo8qnofa-ttgo8qnofa.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\g3zdrs9vsy-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\5bfiq8c252-{0}-muycvpuwrr-muycvpuwrr.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\eziabhgykr-{0}-87fc7y1x7t-87fc7y1x7t.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\mi58d99c3l-{0}-mlv21k5csn-mlv21k5csn.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\vsnvsqg3le-{0}-1r5p1ta0ej-1r5p1ta0ej.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\4vd6owpo89-{0}-1r5p1ta0ej-1r5p1ta0ej.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\staticwebassets.development.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionS.B93722BB.Up2Date
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\refint\FashionStoreAdmin.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.pdb
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.genruntimeconfig.cache
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\ref\FashionStoreAdmin.dll
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\dnl89ppp48-{0}-niga04uct6-niga04uct6.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\gbep3u2ta8-{0}-32yx3ulb97-32yx3ulb97.gz

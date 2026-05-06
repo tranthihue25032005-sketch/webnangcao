@@ -1,0 +1,198 @@
+@model FashionStoreAdmin.Models.EmployeeManagementViewModel
+@{
+    ViewData["Title"] = "Quản lý nhân viên";
+    @* string HienThiRole(FashionStoreAdmin.Models.EmployeeRole role) => role == FashionStoreAdmin.Models.EmployeeRole.Admin ? "Admin" : "Staff";
+    string HienThiTrangThai(FashionStoreAdmin.Models.EmployeeStatus status) => status == FashionStoreAdmin.Models.EmployeeStatus.Active ? "Active" : "Blocked"; *@
+}
+
+<h1 class="h3 mb-3">Quản lý nhân viên</h1>
+
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-header bg-white"><strong>Thêm nhân viên</strong></div>
+    <div class="card-body">
+        <form asp-action="AddEmployee" method="post" class="row g-3">
+            @Html.AntiForgeryToken()
+            <div class="col-md-3">
+                <label class="form-label">Họ tên</label>
+                <input name="fullName" class="form-control" required />
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" required />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">SĐT</label>
+                <input name="phoneNumber" class="form-control" required />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Mật khẩu</label>
+                <input type="password" name="password" class="form-control" required />
+            </div>
+            <div class="col-md-1">
+                <label class="form-label">Role</label>
+                <select name="role" class="form-select">
+                    <option value="@FashionStoreAdmin.Models.UserRole.Admin">Admin</option>
+                    @* <option value="@FashionStoreAdmin.Models.UserRole.Khach">Khách hàng</option>  *@
+                    <option value="@FashionStoreAdmin.Models.UserRole.Sale">Nhân viên</option>
+                </select>
+            </div>
+            <div class="col-md-1 d-grid">
+                <label class="form-label">&nbsp;</label>
+                <button class="btn btn-primary" type="submit">Thêm</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="table-responsive">
+        <table class="table table-striped mb-0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên</th>
+                    @* <th>Tên đăng nhập</th> *@
+                    <th>Email</th>
+                    <th>SĐT</th>
+                    <th>Role</th>
+                    <th>Trạng thái</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var e in Model.Employees)
+            {
+                <tr>
+                    <td>@e.Id</td>
+                    <td>@e.FullName</td>
+                    @* <td>@e.Username</td> *@
+                    <td>@e.Email</td>
+                    <td>@e.PhoneNumber</td>
+                    <td>@e.Role</td>
+                    <td>
+                        <span class="badge @(!e.IsLocked ? "text-bg-success" : "text-bg-danger")">
+                            @(!e.IsLocked ? "Active" : "Blocked")
+                        </span>
+                    </td>
+                    <td class="d-flex gap-1">
+                        <button
+                            type="button"
+                            class="btn btn-sm btn-outline-primary btn-edit-employee"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editEmployeeModal"
+                            data-id="@e.Id"
+                            data-fullname="@e.FullName"
+                            data-phonenumber="@e.PhoneNumber"
+                            data-role="@e.Role">
+                            Edit
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-sm btn-outline-dark btn-reset-password"
+                            data-bs-toggle="modal"
+                            data-bs-target="#resetPasswordModal"
+                            data-id="@e.Id"
+                            data-name="@e.FullName">
+                            Reset password
+                        </button>
+                        <form asp-action="DeleteEmployee" method="post" onsubmit="return confirm('Chuyển tài khoản sang Blocked?');">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@e.Id" />
+                            <button class="btn btn-sm btn-outline-danger" type="submit">Delete</button>
+                        </form>
+                        <form asp-action="ToggleEmployeeStatus" method="post">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@e.Id" />
+                            <button class="btn btn-sm @(!e.IsLocked ? "btn-warning" : "btn-success")" type="submit">
+                                @(!e.IsLocked ? "Block" : "Active")
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="editEmployeeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="UpdateEmployee" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title">Sửa thông tin nhân viên</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="edit-employee-id" name="id" />
+                    <div class="mb-3">
+                        <label class="form-label">Họ tên</label>
+                        <input id="edit-employee-name" name="fullName" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">SĐT</label>
+                        <input id="edit-employee-phone" name="phoneNumber" class="form-control" required />
+                    </div>
+                    <div>
+                        <label class="form-label">Role</label>
+                        <select id="edit-employee-role" name="role" class="form-select">
+                            <option value="@FashionStoreAdmin.Models.UserRole.Admin">Admin</option>
+                            <option value="@FashionStoreAdmin.Models.UserRole.Sale">Nhân viên</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="resetPasswordModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="ResetEmployeePassword" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title">Reset password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="reset-employee-id" name="id" />
+                    <p id="reset-employee-label" class="text-muted"></p>
+                    <label class="form-label">Mật khẩu mới</label>
+                    <input type="password" name="newPassword" class="form-control" required />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        (() => {
+            document.querySelectorAll('.btn-edit-employee').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.getElementById('edit-employee-id').value = btn.dataset.id || '';
+                    document.getElementById('edit-employee-name').value = btn.dataset.fullname || '';
+                    document.getElementById('edit-employee-phone').value = btn.dataset.phonenumber || '';
+                    document.getElementById('edit-employee-role').value = btn.dataset.role || 'Sale';
+                });
+            });
+
+            document.querySelectorAll('.btn-reset-password').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.getElementById('reset-employee-id').value = btn.dataset.id || '';
+                    document.getElementById('reset-employee-label').textContent = `Nhân viên: ${btn.dataset.name || ''}`;
+                });
+            });
+        })();
+    </script>
+}

@@ -1,0 +1,66 @@
+@model FashionStoreAdmin.Models.ClientHomeViewModel
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+<section class="banner p-0 p-md-0 mb-4">
+    <div class="position-relative overflow-hidden rounded-4">
+        <img
+            src="https://cdn.hstatic.net/files/200000584505/file/b_ab-03.jpg"
+            alt="Banner thời trang"
+            class="w-100"
+            style="height: 320px; object-fit: cover;" />
+        <div class="position-absolute top-0 start-0 p-4 p-md-5" style="max-width: 560px;">
+            <h1 class="display-6 fw-bold text-white">THỜI TRANG MỚI MỖI NGÀY</h1>
+            <p class="mb-0 text-white-75">Khám phá bộ sưu tập hot với giá tốt và giao nhanh toàn quốc.</p>
+        </div>
+    </div>
+</section>
+
+@if (TempData["SuccessMessage"] is string msg)
+{
+    <div class="alert alert-success mb-4">@msg</div>
+}
+
+<section class="mb-4">
+    <h2 class="h4 mb-3">Danh mục</h2>
+    <div class="d-flex gap-2 flex-wrap">
+        @foreach (var category in Model.Categories)
+        {
+            <a class="btn btn-outline-primary" asp-action="Products" asp-route-categoryId="@category.Id">@category.Name</a>
+        }
+    </div>
+</section>
+
+ <div class="mb-4 position-relative">
+    <input type="text" id="searchBox" class="form-control" placeholder="Tìm sản phẩm..." />
+
+    <div id="searchResults" 
+         class="list-group position-absolute w-100 shadow"
+         style="z-index: 1000;"></div>
+</div> 
+
+<section>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4 mb-0">Sản phẩm nổi bật</h2>
+        <a asp-action="Products" class="btn btn-sm btn-dark">Xem tất cả</a>
+    </div>
+    <div class="row g-3">
+        @foreach (var item in Model.FeaturedProducts)
+        {
+            <div class="col-6 col-md-3">
+                <div class="product-card p-2 h-100">
+                    <img src="@(item.ProductImages.FirstOrDefault()?.ImageUrl 
+    ?? "/images/no-image.png")"
+     class="img-fluid rounded mb-2"
+     alt="@item.Name" />
+                    <div class="fw-semibold">@item.Name</div>
+                    <div class="text-danger fw-bold">@item.Price.ToString("N0") VND</div>
+                    <a class="btn btn-sm btn-outline-dark mt-2" asp-action="Product" asp-route-id="@item.Id">Xem chi tiết</a>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+<script src="~/js/search.js"></script>
+

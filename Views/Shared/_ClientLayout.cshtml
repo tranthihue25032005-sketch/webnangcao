@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Fashion Store</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="~/css/chat.css" />
+    <style>
+        body { background: #f8f9fb; }
+        .client-navbar { background: #111827; }
+        .client-navbar .navbar-brand, .client-navbar .nav-link, .client-navbar .text-light { color: #fff !important; }
+        .banner { background: linear-gradient(135deg, #2b6cb0, #7b2cbf); color: #fff; border-radius: 16px; }
+        .product-card { border: 1px solid #e5e7eb; border-radius: 12px; background: #fff; transition: .2s; }
+        .product-card:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.06); }
+        footer { background: #111827; color: #d1d5db; }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg client-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" asp-controller="Client" asp-action="Index">
+                <i class="fa-solid fa-store me-2"></i>Fashion Store
+            </a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#clientNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="clientNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" asp-controller="Client" asp-action="Index">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Client" asp-action="Products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Client" asp-action="Orders">Đơn hàng</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a class="text-light text-decoration-none" asp-controller="Client" asp-action="Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Giỏ hàng (@(ViewBag.CartCount ?? 0))
+                    </a>
+                    @if (!string.IsNullOrWhiteSpace(ViewBag.ClientUserEmail as string))
+                    {
+                        <span class="text-light">Xin chào, @ViewBag.ClientUserName</span>
+                        <form asp-controller="Client" asp-action="Logout" method="post" class="d-inline">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-sm btn-outline-light">Đăng xuất</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <a class="btn btn-sm btn-outline-light" asp-controller="Client" asp-action="Login">Đăng nhập</a>
+                        <a class="btn btn-sm btn-warning" asp-controller="Client" asp-action="Register">Đăng ký</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4 flex-fill">
+        @RenderBody()
+    </main>
+
+    <footer class="mpy-4 mt-auto">
+        <div class="container d-flex justify-content-between">
+            <span>Fashion Store - Thời trang mỗi ngày</span>
+            <span>Hotline: 0909 000 000</span>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    @* chatbot *@
+    <!-- FLOAT BUTTON -->
+    <div class="chat-toggle" onclick="toggleChat()">
+        💬
+    </div>
+
+    <!-- HEADER -->
+    <div id="chatContainer" class="chat-container">
+
+    <div class="chat-box">
+        <div class="chat-header">
+            <h4>C-STYLIST</h4>
+        </div>
+
+        <div class="suggestions">
+            <button onclick="sendMsg('Xem sản phẩm mới nhất')">Xem sản phẩm mới nhất</button>
+            <button onclick="sendMsg('Hỗ trợ chọn size')">Hỗ trợ chọn size/số</button>
+            <button onclick="sendMsg('Ưu đãi hiện tại')">Đang có ưu đãi gì?</button>
+            <button onclick="sendMsg('Hướng dẫn đặt hàng')">Hướng dẫn đặt hàng</button>
+        </div>
+
+        <div id="chatBody" class="chat-body"></div>
+
+        <div class="chat-input">
+            <input id="msgInput" placeholder="Nhập nội dung..." />
+            <button onclick="sendMsg()">Gửi</button>
+        </div>
+    </div>
+
+</div>
+    <script>
+        function toggleChat() {
+        let chat = document.getElementById("chatContainer");
+        chat.classList.toggle("show");
+    }
+            
+    async function sendMsg(text) {
+
+    let msg = text || document.getElementById("msgInput").value;
+
+    if (!msg) return;
+
+    addMessage("user", msg);
+
+    document.getElementById("msgInput").value = "";
+
+    let res = await fetch("/chatbot/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: msg })
+    });
+
+    let data = await res.json();
+
+    addMessage("bot", data.reply);
+}
+
+function addMessage(type, text) {
+
+    let div = document.createElement("div");
+    div.className = type === "user" ? "msg user" : "msg bot";
+    div.innerText = text;
+
+    document.getElementById("chatBody").appendChild(div);
+
+    document.getElementById("chatBody").scrollTop =
+        document.getElementById("chatBody").scrollHeight;
+}
+    </script>
+</body>
+</html>

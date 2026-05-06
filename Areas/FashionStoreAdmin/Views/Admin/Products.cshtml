@@ -1,0 +1,399 @@
+@model FashionStoreAdmin.Models.ProductManagementViewModel
+@{
+    ViewData["Title"] = "Quản lý sản phẩm";
+    var categories = Model.Categories;
+    var brands = Model.Brands;
+    var collections = Model.Collections;
+}
+
+<h1 class="h3 mb-3">Quản lý sản phẩm</h1>
+
+<div class="row g-3 mb-4">
+    <div class="col-lg-8">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white"><strong>Thêm sản phẩm mới</strong></div>
+            <div class="card-body">
+                <form asp-action="AddProduct" method="post" enctype="multipart/form-data" class="row g-3">
+                    @Html.AntiForgeryToken()
+                    <div class="col-md-4">
+                        <label class="form-label">Tên sản phẩm</label>
+                        <input name="Name" class="form-control" required />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Mô tả</label>
+                        <input name="Description" class="form-control" />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Danh mục</label>
+                        <select name="CategoryId" class="form-select" required>
+                            @foreach (var category in categories)
+                            {
+                                <option value="@category.Id">@category.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Thương hiệu</label>
+                        <select name="BrandId" class="form-select">
+                            @foreach (var brand in brands)
+                            {
+                                <option value="@brand.Id">@brand.Name</option>
+                            }
+                        </select>
+                    </div>
+                    @* <div class="col-md-2">
+                        <label class="form-label">Bộ sưu tập</label>
+                        <select name="CollectionId" class="form-select">
+                            @foreach (var collection in collections)
+                            {
+                                <option value="@collection.Id">@collection.Name</option>
+                            }
+                        </select>
+                    </div> *@
+                    <div class="col-md-2">
+                        <label class="form-label">Giá gốc</label>
+                        <input type="number" min="0" name="OriginalPrice" class="form-control" required />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Giá bán</label>
+                        <input type="number" min="0" name="Price" class="form-control" required />
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-label">Tồn</label>
+                        <input type="number" min="0" name="Stock" class="form-control" required />
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-label">Size</label>
+                        <input name="Size" class="form-control" />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Màu</label>
+                        <input name="Color" class="form-control" />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Kích hoạt</label>
+                        <select name="IsActive" class="form-select">
+                            <option value="true">Có</option>
+                            <option value="false">Không</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 d-grid">
+                        <label class="form-label">&nbsp;</label>
+                        <button class="btn btn-primary" type="submit">Thêm sản phẩm</button>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label">Ảnh sản phẩm (nhiều ảnh)</label>
+                        <input class="form-control" type="file" name="imageFiles" accept=".jpg,.jpeg,.png,.webp" multiple />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @* <div class="col-lg-4">
+        <div class="card border-0 shadow-sm mb-3">
+            <div class="card-header bg-white"><strong>Thêm sản phẩm (Size/Màu)</strong></div>
+            <div class="card-body">
+                <form asp-action="AddVariant" method="post" class="row g-2">
+                    @Html.AntiForgeryToken()
+                    <div class="col-12">
+                        <label class="form-label">Sản phẩm</label>
+                        <select class="form-select" name="productId" required>
+                            @foreach (var p in Model.Products)
+                            {
+                                <option value="@p.Id">@p.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label">Size</label>
+                        <input class="form-control" name="size" required />
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label">Màu</label>
+                        <input class="form-control" name="color" required />
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label">Giá</label>
+                        <input type="number" min="0" class="form-control" name="price" required />
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label">Tồn kho</label>
+                        <input type="number" min="0" class="form-control" name="stock" required />
+                    </div>
+                    <div class="col-12 d-grid">
+                        <button class="btn btn-dark" type="submit">Thêm sản phẩm</button>
+                    </div>
+                </form>
+            </div>
+        </div> *@
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white"><strong>Thêm hình ảnh (Gallery)</strong></div>
+            <div class="card-body">
+                <form asp-action="AddImage" method="post">
+                    @Html.AntiForgeryToken()
+                    <label class="form-label">Sản phẩm</label>
+                    <select class="form-select mb-2" name="productId" required>
+                        @foreach (var p in Model.Products)
+                        {
+                            <option value="@p.Id">@p.Name</option>
+                        }
+                    </select>
+                    <label class="form-label">URL hình ảnh</label>
+                    <input class="form-control mb-2" name="imageUrl" placeholder="https://..." required />
+                    <label class="form-label">Chú thích</label>
+                    <input class="form-control mb-3" name="caption" />
+                    <button class="btn btn-secondary w-100" type="submit">Thêm ảnh</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên</th>
+                    <th>Mô tả</th>
+                    <th>Danh mục</th>
+                    <th>Thương hiệu</th>
+                    @* <th>Bộ sưu tập</th> *@
+                    <th>Giá gốc</th>
+                    <th>Giá</th>
+                    <th>Tồn kho</th>
+                    <th>Sản phẩm</th>
+                    <th>Gallery</th>
+                    <th>Kích hoạt</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.Products)
+            {
+                var categoryName = categories.FirstOrDefault(c => c.Id == item.CategoryId)?.Name ?? "Không rõ";
+                var brandName = brands.FirstOrDefault(c => c.Id == item.BrandId)?.Name ?? "-";
+                var collectionName = collections.FirstOrDefault(c => c.Id == item.CollectionId)?.Name ?? "-";
+                var variantCount = Model.Variants.Count(v => v.ProductId == item.Id);
+                var imageCount = Model.Images.Count(i => i.ProductId == item.Id);
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@categoryName</td>
+                    <td>@brandName</td>
+                    @* <td>@collectionName</td> *@
+                    <td>@item.OriginalPrice.ToString("N0") VND</td>
+                    <td>@item.Price.ToString("N0") VND</td>
+                    <td>@item.Stock</td>
+                    <td>@variantCount sản phẩm</td>
+                    <td>@imageCount ảnh</td>
+                    <td>@(item.IsActive ? "Có" : "Không")</td>
+                    <td class="d-flex gap-1">
+                        <button
+                            type="button"
+                            class="btn btn-sm btn-outline-primary btn-edit-product"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editProductModal"
+                            data-id="@item.Id"
+                            data-name="@item.Name"
+                            data-description="@item.Description"
+                            data-categoryid="@item.CategoryId"
+                            data-brandid="@item.BrandId"
+                            @* data-collectionid="@item.CollectionId" *@
+                            data-originalprice="@item.OriginalPrice"
+                            data-price="@item.Price"
+                            data-stock="@item.Stock"
+                            data-size="@item.Size"
+                            data-color="@item.Color"
+                            data-isactive="@item.IsActive">
+                            Sửa
+                        </button>
+                        <form asp-action="DeleteProduct" method="post" onsubmit="return confirm('Xóa sản phẩm này?');">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button class="btn btn-sm btn-outline-danger" type="submit">Xóa</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row g-3 mt-1">
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white"><strong>Danh sách sản phẩm</strong></div>
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+                        <tr><th>Sản phẩm</th><th>Size</th><th>Màu</th><th>Giá</th><th>Tồn</th></tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var variant in Model.Variants)
+                    {
+                        var p = Model.Products.FirstOrDefault(x => x.Id == variant.ProductId);
+                        <tr>
+                            <td>@(p?.Name ?? "N/A")</td>
+                            <td>@variant.Size</td>
+                            <td>@variant.Color</td>
+                            <td>@variant.Price.ToString("N0") VND</td>
+                            <td>@variant.Stock</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white"><strong>Thư viện ảnh sản phẩm</strong></div>
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+                        <tr><th>Sản phẩm</th><th>Ảnh</th><th>Chú thích</th><th>URL</th></tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var image in Model.Images)
+                    {
+                        var p = Model.Products.FirstOrDefault(x => x.Id == image.ProductId);
+                        <tr>
+                            <td>@(p?.Name ?? "N/A")</td>
+                            <td>
+                                @if (image.ImageUrl.StartsWith("/"))
+                                {
+                                    <img src="@image.ImageUrl" alt="@image.Caption" style="width:60px;height:60px;object-fit:cover;border-radius:6px;" />
+                                }
+                                else
+                                {
+                                    <span class="text-muted">URL ngoài</span>
+                                }
+                            </td>
+                            <td>@image.Caption</td>
+                            <td class="text-truncate" style="max-width:240px;">@image.ImageUrl</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editProductModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <form asp-action="UpdateProduct" method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title">Sửa sản phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="Id" id="edit-id" />
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Tên sản phẩm</label>
+                            <input class="form-control" name="Name" id="edit-name" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Mô tả</label>
+                            <input class="form-control" name="Description" id="edit-description" />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Danh mục</label>
+                            <select class="form-select" name="CategoryId" id="edit-category">
+                                @foreach (var category in categories)
+                                {
+                                    <option value="@category.Id">@category.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Thương hiệu</label>
+                            <select class="form-select" name="BrandId" id="edit-brand">
+                                @foreach (var brand in brands)
+                                {
+                                    <option value="@brand.Id">@brand.Name</option>
+                                }
+                            </select>
+                        </div>
+                        @* <div class="col-md-4">
+                            <label class="form-label">Bộ sưu tập</label>
+                            <select class="form-select" name="CollectionId" id="edit-collection">
+                                @foreach (var collection in collections)
+                                {
+                                    <option value="@collection.Id">@collection.Name</option>
+                                }
+                            </select>
+                        </div> *@
+                        <div class="col-md-3">
+                            <label class="form-label">Giá gốc</label>
+                            <input type="number" min="0" class="form-control" name="OriginalPrice" id="edit-original-price" />
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Giá bán</label>
+                            <input type="number" min="0" class="form-control" name="Price" id="edit-price" />
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Số lượng</label>
+                            <input type="number" min="0" class="form-control" name="Stock" id="edit-stock" />
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Size</label>
+                            <input class="form-control" name="Size" id="edit-size" />
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Màu sắc</label>
+                            <input class="form-control" name="Color" id="edit-color" />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Kích hoạt</label>
+                            <select class="form-select" name="IsActive" id="edit-is-active">
+                                <option value="true">Có</option>
+                                <option value="false">Không</option>
+                            </select>
+                        </div>
+                        <div class="col-md-8">
+                            <label class="form-label">Upload thêm ảnh (nhiều ảnh)</label>
+                            <input type="file" class="form-control" name="imageFiles" accept=".jpg,.jpeg,.png,.webp" multiple />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        (() => {
+            const editButtons = document.querySelectorAll('.btn-edit-product');
+            for (const btn of editButtons) {
+                btn.addEventListener('click', () => {
+                    document.getElementById('edit-id').value = btn.dataset.id || '';
+                    document.getElementById('edit-name').value = btn.dataset.name || '';
+                    document.getElementById('edit-description').value = btn.dataset.description || '';
+                    document.getElementById('edit-category').value = btn.dataset.categoryid || '';
+                    document.getElementById('edit-brand').value = btn.dataset.brandid || '';
+                    @* document.getElementById('edit-collection').value = btn.dataset.collectionid || ''; *@
+                    document.getElementById('edit-original-price').value = btn.dataset.originalprice || '0';
+                    document.getElementById('edit-price').value = btn.dataset.price || '0';
+                    document.getElementById('edit-stock').value = btn.dataset.stock || '0';
+                    document.getElementById('edit-size').value = btn.dataset.size || '';
+                    document.getElementById('edit-color').value = btn.dataset.color || '';
+                    document.getElementById('edit-is-active').value = (btn.dataset.isactive || 'true').toLowerCase();
+                });
+            }
+        })();
+    </script>
+}
+

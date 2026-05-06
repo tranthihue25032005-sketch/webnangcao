@@ -1,0 +1,36 @@
+@model FashionStoreAdmin.Models.QRPaymentViewModel
+@{
+    ViewData["Title"] = "Thanh toán QR";
+}
+
+<h1 class="h3 mb-3">Thanh toán QR</h1>
+
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body text-center">
+                <img src="@Model.QrCodeImageBase64" alt="QR Code thanh toán" style="width: 220px; height: 220px;" class="mb-3" />
+                <div class="text-muted small">
+                    Nội dung QR được tạo dựa trên số tiền của đơn hàng.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white">
+                <strong>Thông tin đơn hàng</strong>
+            </div>
+            <div class="card-body">
+                <div class="mb-2"><strong>Mã đơn:</strong> #@Model.OrderId</div>
+                <div class="mb-2"><strong>Tổng tiền:</strong> <span class="text-danger fw-bold">@Model.TotalAmount.ToString("N0") VND</span></div>
+                <div class="mb-3"><strong>Trạng thái:</strong> <span class="badge text-bg-info">@Model.Status</span></div>
+
+                <a class="btn btn-outline-dark w-100" asp-controller="Client" asp-action="Orders">
+                    <i class="fa-solid fa-list me-2"></i> Về đơn hàng của tôi
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+

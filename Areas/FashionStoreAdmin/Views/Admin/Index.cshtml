@@ -1,0 +1,168 @@
+@model FashionStoreAdmin.Models.DashboardOverviewViewModel
+@using System.Globalization
+@{
+    ViewData["Title"] = "Bảng điều khiển";
+    var cards = Model.Tiles.Take(4).ToList();
+    var cardColors = new[] { "adm-card-cyan", "adm-card-green", "adm-card-orange", "adm-card-red" };
+    var topOrders = Model.RecentOrders.Take(5).ToList();
+    string FormatMoney(decimal amount) => amount.ToString("N0", CultureInfo.InvariantCulture) + " ₫";
+}
+
+<div class="adm-header-row">
+    <h1 class="adm-title">Dashboard</h1>
+</div>
+
+<div class="row g-3 mb-3">
+    @for (var i = 0; i < cards.Count; i++)
+    {
+        var card = cards[i];
+        <div class="col-xl-3 col-md-6">
+            <div class="adm-stat-card @cardColors[i]">
+                <div class="adm-stat-value fw-bold">@card.Value</div>
+                <div class="adm-stat-label fw-bold">@card.Title</div>
+                <div class="adm-stat-footer">@card.ChangeText</div>
+                <i class="@card.IconClass adm-stat-icon"></i>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="row g-3 mb-3">
+    <div class="col-lg-8">
+        <div class="adm-box">
+            <div class="adm-box-title fw-bold">Tải máy chủ</div>
+            <div class="adm-box-body">
+                <canvas id="salesBarChart" height="150"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="adm-box">
+            <div class="adm-box-title fw-bold">Khách truy cập</div>
+            <div class="adm-box-body">
+                <canvas id="visitorPieChart" height="150"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3 mb-3">
+    <div class="col-lg-8">
+        <div class="adm-box">
+            <div class="adm-box-title fw-bold">Sales</div>
+            <div class="adm-box-body">
+                <canvas id="salesAreaChart" height="140"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="adm-box">
+            <div class="adm-box-title fw-bold">Thông tin nổi bật</div>
+            <div class="adm-box-body">
+                @foreach (var m in Model.Metrics.Take(4))
+                {
+                    <div class="adm-highlight-item">
+                        <div class="fw-bold">@m.Label</div>
+                        <div class="adm-highlight-value fw-bold text-primary">@m.Value</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="adm-box">
+    <div class="adm-box-title fw-bold">Đơn hàng gần đây</div>
+    <div class="table-responsive">
+        <table class="table table-striped mb-0">
+            <thead>
+                <tr>
+                    <th class="fw-bold">Mã đơn</th>
+                    <th class="fw-bold">Khách hàng</th>
+                    <th class="fw-bold">Ngày đặt</th>
+                    <th class="fw-bold">Tổng tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var order in topOrders)
+            {
+                <tr>
+                    <td class="fw-bold">#@order.Id</td>
+                    <td class="fw-bold">@order.CustomerName</td>
+                    <td>@order.OrderDate.ToString("dd/MM/yyyy")</td>
+                    <td class="fw-bold text-danger">@FormatMoney(order.TotalAmount)</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+    <script>
+        (() => {
+            const labels = [@Html.Raw(string.Join(",", Model.RevenueLastDays.Select(d => "\"" + d.Label + "\"")))];
+            const values = [@string.Join(",", Model.RevenueLastDays.Select(d => d.Amount.ToString(CultureInfo.InvariantCulture)))];
+            const donutLabels = [@Html.Raw(string.Join(",", Model.CategoryDonut.Select(d => "\"" + d.Name + "\"")))];
+            const donutValues = [@string.Join(",", Model.CategoryDonut.Select(d => d.Percent.ToString(CultureInfo.InvariantCulture)))];
+
+            const bar = document.getElementById('salesBarChart');
+            if (bar) {
+                new Chart(bar, {
+                    type: 'bar',
+                    data: {
+                        labels,
+                        datasets: [{
+                            data: values,
+                            backgroundColor: ['#e74c3c', '#1abc9c', '#3498db', '#f39c12', '#2ecc71', '#9b59b6']
+                        }]
+                    },
+                    options: {
+                        plugins: { legend: { display: false } },
+                        scales: { y: { beginAtZero: true } }
+                    }
+                });
+            }
+
+            const area = document.getElementById('salesAreaChart');
+            if (area) {
+                new Chart(area, {
+                    type: 'line',
+                    data: {
+                        labels,
+                        datasets: [{
+                            data: values,
+                            borderColor: '#4aa3df',
+                            backgroundColor: 'rgba(74,163,223,0.28)',
+                            fill: true,
+                            tension: 0.35,
+                            pointRadius: 3
+                        }]
+                    },
+                    options: {
+                        plugins: { legend: { display: false } },
+                        scales: { y: { beginAtZero: true } }
+                    }
+                });
+            }
+
+            const pie = document.getElementById('visitorPieChart');
+            if (pie) {
+                new Chart(pie, {
+                    type: 'doughnut',
+                    data: {
+                        labels: donutLabels,
+                        datasets: [{
+                            data: donutValues,
+                            backgroundColor: ['#3498db', '#1abc9c', '#f1c40f', '#e67e22', '#e74c3c'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: { plugins: { legend: { position: 'bottom' } }, cutout: '58%' }
+                });
+            }
+        })();
+    </script>
+}
+

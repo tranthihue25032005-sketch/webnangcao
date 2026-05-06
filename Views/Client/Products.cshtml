@@ -1,0 +1,62 @@
+@model FashionStoreAdmin.Models.ClientProductsViewModel
+@{
+    ViewData["Title"] = "Sản phẩm";
+}
+
+<h1 class="h3 mb-3">Danh sách sản phẩm</h1>
+
+<form method="get" class="card border-0 shadow-sm mb-4">
+    <div class="card-body row g-3">
+        <div class="col-md-4">
+            <label class="form-label">Tìm kiếm</label>
+            <input name="search" value="@Model.Search" class="form-control" placeholder="Nhập tên sản phẩm..." />
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">Danh mục</label>
+            <select name="categoryId" class="form-select">
+                <option value="">Tất cả</option>
+                @foreach (var category in Model.Categories)
+                {
+                    if (Model.CategoryId == category.Id)
+                    {
+                        <option value="@category.Id" selected>@category.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@category.Id">@category.Name</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label class="form-label">Giá từ</label>
+            <input type="number" min="0" name="minPrice" value="@Model.MinPrice" class="form-control" />
+        </div>
+        <div class="col-md-2">
+            <label class="form-label">Đến</label>
+            <input type="number" min="0" name="maxPrice" value="@Model.MaxPrice" class="form-control" />
+        </div>
+        <div class="col-md-1 d-grid">
+            <label class="form-label">&nbsp;</label>
+            <button class="btn btn-primary">Lọc</button>
+        </div>
+    </div>
+</form>
+
+<div class="row g-3">
+    @foreach (var item in Model.Products)
+    {
+        <div class="col-6 col-md-3">
+            <div class="product-card p-2 h-100">
+                <img src="@(item.ProductImages.FirstOrDefault()?.ImageUrl 
+    ?? "/images/no-image.png")"
+     class="img-fluid rounded mb-2"
+     alt="@item.Name" />
+                <div class="fw-semibold">@item.Name</div>
+                <div class="small text-muted">@item.Description</div>
+                <div class="text-danger fw-bold mt-1">@item.Price.ToString("N0") VND</div>
+                <a class="btn btn-sm btn-outline-dark mt-2" asp-action="Product" asp-route-id="@item.Id">Xem chi tiết</a>
+            </div>
+        </div>
+    }
+</div>
