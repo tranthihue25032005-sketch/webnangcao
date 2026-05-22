@@ -49,8 +49,8 @@ namespace FashionStoreAdmin.Controllers
 
         private async Task<string> AskGemini(string prompt)
         {
-            var apiKey = "AIzaSyB6lC8W2HoSy2fRv6Wu906bAxM1Tac4u48"; 
-            var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemma-3-4b-it:generateContent?key={apiKey}";
+            var apiKey = "AIzaSyA49gSZbing8GS5dXNuoWHdSuv5QOAA_Oo"; 
+            var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={apiKey}";
 
             using var client = new HttpClient();
             var body = new { contents = new[] { new { parts = new[] { new { text = "Bạn là chatbot bán hàng thời trang. Trả lời bằng tiếng Việt. Câu hỏi: " + prompt } } } } };

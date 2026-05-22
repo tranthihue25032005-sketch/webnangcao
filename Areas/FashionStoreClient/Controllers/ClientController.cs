@@ -57,7 +57,7 @@ public IActionResult Search(string keyword)
     ? p.ProductImages.FirstOrDefault().ImageUrl 
     : "/images/no-image.png"
         })
-        .Take(5)
+        
         .ToList();
 
     return Json(results);

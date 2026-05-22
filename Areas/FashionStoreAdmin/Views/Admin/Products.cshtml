@@ -89,8 +89,8 @@
             </div>
         </div>
     </div>
-    @* <div class="col-lg-4">
-        <div class="card border-0 shadow-sm mb-3">
+    <div class="col-lg-4">
+        @* <div class="card border-0 shadow-sm mb-3">
             <div class="card-header bg-white"><strong>Thêm sản phẩm (Size/Màu)</strong></div>
             <div class="card-body">
                 <form asp-action="AddVariant" method="post" class="row g-2">
@@ -149,21 +149,154 @@
     </div>
 </div>
 
+<div class="d-flex justify-content-between align-items-center gap-2 mb-3">
+
+    <!-- bên trái -->
+    <div class="d-flex gap-2 flex-grow-1">
+
+        <!-- hành động -->
+        <div class="dropdown">
+
+            <button
+                class="btn btn-primary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown">
+
+                Hành động
+
+            </button>
+
+            <ul class="dropdown-menu shadow">
+
+                <li>
+                    <button
+                        class="dropdown-item"
+                        type="button"
+                        onclick="copySelectedProducts()">
+
+                        📋 Sao chép sản phẩm đã chọn
+
+                    </button>
+                </li>
+
+                <li>
+                    <button
+                        class="dropdown-item text-danger"
+                        type="button"
+                        onclick="deleteSelectedProducts()">
+
+                        🗑️ Xóa sản phẩm đã chọn
+
+                    </button>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- tìm kiếm -->
+        <form method="get" class="flex-grow-1">
+
+            <div class="input-group">
+
+                <input
+                    type="text"
+                    name="keyword"
+                    class="form-control"
+                    placeholder="Tìm tên, mô tả..."
+                    value="@Model.Keyword" />
+
+                <button class="btn btn-primary">
+                    Tìm kiếm
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- cấu hình cột -->
+    <div class="dropdown">
+
+        <button
+            class="btn btn-outline-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown">
+
+            ⚙️ Cấu hình cột
+
+        </button>
+
+        <ul class="dropdown-menu dropdown-menu-end shadow p-2">
+
+            <li>
+                <label class="dropdown-item">
+                    <input
+                        type="checkbox"
+                        class="form-check-input me-2 column-toggle"
+                        data-column="col-description"
+                        checked>
+
+                    Mô tả
+                </label>
+            </li>
+
+            <li>
+                <label class="dropdown-item">
+                    <input
+                        type="checkbox"
+                        class="form-check-input me-2 column-toggle"
+                        data-column="col-brand"
+                        checked>
+
+                    Thương hiệu
+                </label>
+            </li>
+
+            <li>
+                <label class="dropdown-item">
+                    <input
+                        type="checkbox"
+                        class="form-check-input me-2 column-toggle"
+                        data-column="col-stock"
+                        checked>
+
+                    Tồn kho
+                </label>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
 <div class="card border-0 shadow-sm">
     <div class="table-responsive">
         <table class="table table-hover mb-0">
             <thead>
                 <tr>
+                    <th>
+                        <input type="checkbox" id="check-all" />
+                    </th>
                     <th>ID</th>
                     <th>Tên</th>
-                    <th>Mô tả</th>
+                    <th class="col-description">
+                        Mô tả
+                    </th>
+
                     <th>Danh mục</th>
-                    <th>Thương hiệu</th>
-                    @* <th>Bộ sưu tập</th> *@
+                    <th class="col-brand">
+                        Thương hiệu
+                    </th>
+                    
                     <th>Giá gốc</th>
                     <th>Giá</th>
-                    <th>Tồn kho</th>
-                    <th>Sản phẩm</th>
+                    <th class="col-stock">
+                        Tồn kho
+                    </th>
+
                     <th>Gallery</th>
                     <th>Kích hoạt</th>
                     <th>Thao tác</th>
@@ -175,22 +308,69 @@
                 var categoryName = categories.FirstOrDefault(c => c.Id == item.CategoryId)?.Name ?? "Không rõ";
                 var brandName = brands.FirstOrDefault(c => c.Id == item.BrandId)?.Name ?? "-";
                 var collectionName = collections.FirstOrDefault(c => c.Id == item.CollectionId)?.Name ?? "-";
-                var variantCount = Model.Variants.Count(v => v.ProductId == item.Id);
+                
                 var imageCount = Model.Images.Count(i => i.ProductId == item.Id);
                 <tr>
+                    <td>
+                        <!--sao chép thông tin-->
+                        <input
+                            type="checkbox"
+                            class="product-checkbox"
+                            value="@item.Id"
+
+                            data-id="@item.Id"
+                            data-name="@item.Name"
+                            data-description="@item.Description"
+                            data-category="@categoryName"
+                            data-brand="@brandName"
+                            data-originalprice="@item.OriginalPrice"
+                            data-price="@item.Price"
+                            data-stock="@item.Stock"
+                            data-size="@item.Size"
+                            data-color="@item.Color"
+                            data-active="@(item.IsActive ? "Có" : "Không")" />
+                    </td>
                     <td>@item.Id</td>
                     <td>@item.Name</td>
-                    <td>@item.Description</td>
+                    <td class="col-description">
+                        @item.Description
+                    </td>
                     <td>@categoryName</td>
-                    <td>@brandName</td>
-                    @* <td>@collectionName</td> *@
+                    <td class="col-brand">
+                        @brandName
+                    </td>
+                   
                     <td>@item.OriginalPrice.ToString("N0") VND</td>
                     <td>@item.Price.ToString("N0") VND</td>
-                    <td>@item.Stock</td>
-                    <td>@variantCount sản phẩm</td>
+                    <td class="col-stock">
+                        @item.Stock
+                    </td>  
                     <td>@imageCount ảnh</td>
                     <td>@(item.IsActive ? "Có" : "Không")</td>
-                    <td class="d-flex gap-1">
+                    <td class="d-flex gap-1 flex-wrap">
+
+                        <!--chi tiết-->
+                        <button
+                            type="button"
+                            class="btn btn-sm btn-outline-info btn-view-product"
+                            data-bs-toggle="modal"
+                            data-bs-target="#viewProductModal"
+
+                            data-id="@item.Id"
+                            data-name="@item.Name"
+                            data-description="@item.Description"
+                            data-category="@categoryName"
+                            data-brand="@brandName"
+                            data-originalprice="@item.OriginalPrice.ToString("N0")"
+                            data-price="@item.Price.ToString("N0")"
+                            data-stock="@item.Stock"
+                            data-size="@item.Size"
+                            data-color="@item.Color"
+                            data-isactive="@(item.IsActive ? "Có" : "Không")">
+
+                            Chi tiết
+                        </button>
+                        <!--sửa-->
                         <button
                             type="button"
                             class="btn btn-sm btn-outline-primary btn-edit-product"
@@ -201,7 +381,6 @@
                             data-description="@item.Description"
                             data-categoryid="@item.CategoryId"
                             data-brandid="@item.BrandId"
-                            @* data-collectionid="@item.CollectionId" *@
                             data-originalprice="@item.OriginalPrice"
                             data-price="@item.Price"
                             data-stock="@item.Stock"
@@ -209,6 +388,27 @@
                             data-color="@item.Color"
                             data-isactive="@item.IsActive">
                             Sửa
+                        </button>
+
+                        <!--copy-->
+                        <button
+                            type="button"
+                            class="btn btn-sm btn-outline-secondary"
+                            onclick="copySingleProduct(this)"
+
+                            data-id="@item.Id"
+                            data-name="@item.Name"
+                            data-description="@item.Description"
+                            data-category="@categoryName"
+                            data-brand="@brandName"
+                            data-originalprice="@item.OriginalPrice.ToString("N0")"
+                            data-price="@item.Price.ToString("N0")"
+                            data-stock="@item.Stock"
+                            data-size="@item.Size"
+                            data-color="@item.Color"
+                            data-active="@(item.IsActive ? "Có" : "Không")">
+
+                            Copy
                         </button>
                         <form asp-action="DeleteProduct" method="post" onsubmit="return confirm('Xóa sản phẩm này?');">
                             @Html.AntiForgeryToken()
@@ -223,66 +423,41 @@
     </div>
 </div>
 
-<div class="row g-3 mt-1">
-    <div class="col-lg-6">
-        <div class="card border-0 shadow-sm">
-            <div class="card-header bg-white"><strong>Danh sách sản phẩm</strong></div>
-            <div class="table-responsive">
-                <table class="table table-striped mb-0">
-                    <thead>
-                        <tr><th>Sản phẩm</th><th>Size</th><th>Màu</th><th>Giá</th><th>Tồn</th></tr>
-                    </thead>
-                    <tbody>
-                    @foreach (var variant in Model.Variants)
-                    {
-                        var p = Model.Products.FirstOrDefault(x => x.Id == variant.ProductId);
-                        <tr>
-                            <td>@(p?.Name ?? "N/A")</td>
-                            <td>@variant.Size</td>
-                            <td>@variant.Color</td>
-                            <td>@variant.Price.ToString("N0") VND</td>
-                            <td>@variant.Stock</td>
-                        </tr>
-                    }
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-6">
-        <div class="card border-0 shadow-sm">
-            <div class="card-header bg-white"><strong>Thư viện ảnh sản phẩm</strong></div>
-            <div class="table-responsive">
-                <table class="table table-striped mb-0">
-                    <thead>
-                        <tr><th>Sản phẩm</th><th>Ảnh</th><th>Chú thích</th><th>URL</th></tr>
-                    </thead>
-                    <tbody>
-                    @foreach (var image in Model.Images)
-                    {
-                        var p = Model.Products.FirstOrDefault(x => x.Id == image.ProductId);
-                        <tr>
-                            <td>@(p?.Name ?? "N/A")</td>
-                            <td>
-                                @if (image.ImageUrl.StartsWith("/"))
-                                {
-                                    <img src="@image.ImageUrl" alt="@image.Caption" style="width:60px;height:60px;object-fit:cover;border-radius:6px;" />
-                                }
-                                else
-                                {
-                                    <span class="text-muted">URL ngoài</span>
-                                }
-                            </td>
-                            <td>@image.Caption</td>
-                            <td class="text-truncate" style="max-width:240px;">@image.ImageUrl</td>
-                        </tr>
-                    }
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+@* phân trang *@
+<div class="d-flex align-items-center gap-2 mt-3">
+
+    @* nút lùi *@
+    <a class="btn btn-sm btn-outline-secondary
+       @(Model.CurrentPage == 1 ? "disabled" : "")"
+
+       href="?page=@(Model.CurrentPage - 1)&keyword=@Model.Keyword">
+
+        <
+    </a>
+
+    @* trang hiện tại *@
+    <span class="btn btn-sm btn-primary rounded-pill px-3">
+        @Model.CurrentPage
+    </span>
+
+    @* nút tới *@
+    <a class="btn btn-sm btn-outline-secondary
+       @(Model.CurrentPage == Model.TotalPages ? "disabled" : "")"
+
+       href="?page=@(Model.CurrentPage + 1)&keyword=@Model.Keyword">
+
+        >
+    </a>
+
+    @* tổng số trang *@
+    <span class="btn btn-sm btn-outline-secondary">
+        @Model.TotalPages Trang
+    </span>
+
 </div>
+
+
+
 
 <div class="modal fade" id="editProductModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
@@ -322,15 +497,7 @@
                                 }
                             </select>
                         </div>
-                        @* <div class="col-md-4">
-                            <label class="form-label">Bộ sưu tập</label>
-                            <select class="form-select" name="CollectionId" id="edit-collection">
-                                @foreach (var collection in collections)
-                                {
-                                    <option value="@collection.Id">@collection.Name</option>
-                                }
-                            </select>
-                        </div> *@
+                        
                         <div class="col-md-3">
                             <label class="form-label">Giá gốc</label>
                             <input type="number" min="0" class="form-control" name="OriginalPrice" id="edit-original-price" />
@@ -373,6 +540,96 @@
     </div>
 </div>
 
+@* chi tiết sản phẩm *@
+<div class="modal fade"
+     id="viewProductModal"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Chi tiết sản phẩm
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <table class="table table-bordered">
+
+                    <tr>
+                        <th>ID</th>
+                        <td id="view-id"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Tên sản phẩm</th>
+                        <td id="view-name"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Mô tả</th>
+                        <td id="view-description"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Danh mục</th>
+                        <td id="view-category"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Thương hiệu</th>
+                        <td id="view-brand"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Giá gốc</th>
+                        <td id="view-originalprice"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Giá bán</th>
+                        <td id="view-price"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Tồn kho</th>
+                        <td id="view-stock"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Size</th>
+                        <td id="view-size"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Màu sắc</th>
+                        <td id="view-color"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Kích hoạt</th>
+                        <td id="view-active"></td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 @section Scripts {
     <script>
         (() => {
@@ -394,6 +651,215 @@
                 });
             }
         })();
-    </script>
-}
 
+        //chi tiết sản phẩm
+        const viewButtons =
+            document.querySelectorAll('.btn-view-product');
+
+        for (const btn of viewButtons) {
+
+            btn.addEventListener('click', () => {
+
+                document.getElementById('view-id').innerText =
+                    btn.dataset.id || '';
+
+                document.getElementById('view-name').innerText =
+                    btn.dataset.name || '';
+
+                document.getElementById('view-description').innerText =
+                    btn.dataset.description || '';
+
+                document.getElementById('view-category').innerText =
+                    btn.dataset.category || '';
+
+                document.getElementById('view-brand').innerText =
+                    btn.dataset.brand || '';
+
+                document.getElementById('view-originalprice').innerText =
+                    btn.dataset.originalprice + ' VND';
+
+                document.getElementById('view-price').innerText =
+                    btn.dataset.price + ' VND';
+
+                document.getElementById('view-stock').innerText =
+                    btn.dataset.stock || '';
+
+                document.getElementById('view-size').innerText =
+                    btn.dataset.size || '';
+
+                document.getElementById('view-color').innerText =
+                    btn.dataset.color || '';
+
+                document.getElementById('view-active').innerText =
+                    btn.dataset.isactive || '';
+            });
+
+        }
+
+        //check all
+        const checkAll = document.getElementById('check-all');
+
+        if (checkAll) {
+
+            checkAll.addEventListener('change', function () {
+
+                const checkboxes =
+                    document.querySelectorAll('.product-checkbox');
+
+                checkboxes.forEach(x => {
+                    x.checked = this.checked;
+                });
+
+            });
+
+        }
+
+        //ẩn hiện cột
+        const toggles =
+                document.querySelectorAll('.column-toggle');
+
+            toggles.forEach(toggle => {
+
+                toggle.addEventListener('change', function () {
+
+                    const column =
+                        this.dataset.column;
+
+                    const elements =
+                        document.querySelectorAll('.' + column);
+
+                    elements.forEach(el => {
+
+                        el.style.display =
+                            this.checked
+                                ? ''
+                                : 'none';
+
+                    });
+
+                });
+
+            });
+
+        // copy nhiều sản phẩm
+        function copySelectedProducts() {
+
+            const checked =
+                document.querySelectorAll(
+                    '.product-checkbox:checked'
+                );
+
+            if (checked.length === 0) {
+
+                alert('Chưa chọn sản phẩm');
+                return;
+            }
+
+            let text = '';
+
+            checked.forEach(x => {
+
+                const row =
+                    x.closest('tr');
+
+                const cells =
+                    row.querySelectorAll('td');
+
+                text +=
+                    'ID: ' + cells[1].innerText + '\n' +
+                    'Tên: ' + cells[2].innerText + '\n' +
+                    'Mô tả: ' + cells[3].innerText + '\n' +
+                    'Danh mục: ' + cells[4].innerText + '\n' +
+                    'Thương hiệu: ' + cells[5].innerText + '\n' +
+                    'Giá gốc: ' + cells[6].innerText + '\n' +
+                    'Giá bán: ' + cells[7].innerText + '\n' +
+                    'Tồn kho: ' + cells[8].innerText + '\n' +
+                    'Gallery: ' + cells[9].innerText + '\n' +
+                    'Kích hoạt: ' + cells[10].innerText + '\n';
+
+                text +=
+                    '-------------------------\n';
+
+            });
+
+            navigator.clipboard.writeText(text);
+
+            alert('Đã sao chép thông tin sản phẩm');
+
+        }
+
+        function copySingleProduct(btn) {
+
+            let text =
+                'ID: ' + btn.dataset.id + '\n' +
+                'Tên: ' + btn.dataset.name + '\n' +
+                'Mô tả: ' + btn.dataset.description + '\n' +
+                'Danh mục: ' + btn.dataset.category + '\n' +
+                'Thương hiệu: ' + btn.dataset.brand + '\n' +
+                'Giá gốc: ' + btn.dataset.originalprice + ' VND\n' +
+                'Giá bán: ' + btn.dataset.price + ' VND\n' +
+                'Tồn kho: ' + btn.dataset.stock + '\n' +
+                'Size: ' + btn.dataset.size + '\n' +
+                'Màu: ' + btn.dataset.color + '\n' +
+                'Kích hoạt: ' + btn.dataset.active;
+
+            navigator.clipboard.writeText(text);
+
+            alert('Đã sao chép sản phẩm');
+        }
+
+        // xóa nhiều sản phẩm
+        function deleteSelectedProducts() {
+
+            const checked =
+                document.querySelectorAll(
+                    '.product-checkbox:checked'
+                );
+
+            if (checked.length === 0) {
+
+                alert('Chưa chọn sản phẩm');
+                return;
+            }
+
+            if (!confirm('Xóa các sản phẩm đã chọn?')) {
+                return;
+            }
+
+            let ids = [];
+
+            checked.forEach(x => {
+                ids.push(x.value);
+            });
+
+            fetch('/Admin/DeleteMultipleProducts', {
+
+                method: 'POST',
+
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+
+                body: JSON.stringify(ids)
+
+            })
+            .then(res => {
+
+                if (res.ok) {
+
+                    alert('Đã xóa');
+
+                    location.reload();
+                }
+                else {
+
+                    alert('Xóa thất bại');
+                }
+
+            });
+
+        }
+    </script>
+
+    
+}

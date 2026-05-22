@@ -93,8 +93,15 @@ public class ProductManagementViewModel
     public IReadOnlyList<Category> Categories { get; set; } = [];
     public IReadOnlyList<Brand> Brands { get; set; } = [];
     public IReadOnlyList<Collection> Collections { get; set; } = [];
-    public IReadOnlyList<ProductVariant> Variants { get; set; } = [];
+    
     public IReadOnlyList<ProductImage> Images { get; set; } = [];
+
+    // PHÂN TRANG
+    public int CurrentPage { get; set; }
+
+    public int TotalPages { get; set; }
+
+    public string Keyword { get; set; } = "";
 }
 
 public class CategoryManagementViewModel

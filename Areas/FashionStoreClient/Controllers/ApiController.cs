@@ -83,7 +83,8 @@ var user = new UserAccount
     FullName = request.FullName,
     Email = request.Email,
     PhoneNumber = request.PhoneNumber,
-    Password = BCrypt.Net.BCrypt.HashPassword(request.Password),
+    // Password = BCrypt.Net.BCrypt.HashPassword(request.Password),
+    Password = request.Password,
     Role = UserRole.Staff,
     IsLocked = false
 };
@@ -97,12 +98,29 @@ return Ok(new { message = "Đăng ký thành công." });
     [HttpPost("login")]
     public IActionResult Login([FromBody] ApiLoginRequest request)
     {
+        // Kiểm tra dữ liệu rỗng
+    if (string.IsNullOrWhiteSpace(request.Email) ||
+        string.IsNullOrWhiteSpace(request.Password))
+    {
+        return BadRequest(new
+        {
+            message = "Thiếu thông tin bắt buộc."
+        });
+    }
         var user = _context.Users
     .FirstOrDefault(x => x.Email == request.Email && !x.IsLocked);
 
-if (user == null || !BCrypt.Net.BCrypt.Verify(request.Password, user.Password))
+// if (user == null || !BCrypt.Net.BCrypt.Verify(request.Password, user.Password))
+// {
+//     return Unauthorized(new { message = "Sai tài khoản hoặc mật khẩu." });
+// }
+
+if (user == null || request.Password != user.Password)
 {
-    return Unauthorized(new { message = "Sai tài khoản hoặc mật khẩu." });
+    return Unauthorized(new
+    {
+        message = "Sai tài khoản hoặc mật khẩu."
+    });
 }
 
 return Ok(new

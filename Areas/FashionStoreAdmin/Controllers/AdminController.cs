@@ -220,17 +220,58 @@ public IActionResult AddCollection(string name, string season)
     return RedirectToAction(nameof(Categories));
 }
 
-    public IActionResult Products()
+    public IActionResult Products(
+    int page = 1,
+    string keyword = "")
+{
+    int pageSize = 10;
+
+    var query = _context.Products.AsQueryable();
+
+    // tìm kiếm
+    if (!string.IsNullOrWhiteSpace(keyword))
     {
-        var model = new ProductManagementViewModel
+        query = query.Where(x =>
+            x.Name.Contains(keyword) ||
+            x.Description.Contains(keyword));
+    }
+
+    // tổng số sản phẩm
+    int totalItems = query.Count();
+    
+    // phân trang
+    var products = query
+        .OrderByDescending(x => x.Id)
+        .Skip((page - 1) * pageSize)
+        .Take(pageSize)
+        .ToList();
+
+        
+
+    var model = new ProductManagementViewModel
     {
-        Products = _context.Products.ToList(),
+        Products = products,
+
         Categories = _context.Categories.ToList(),
-        Brands = _context.Brands.ToList()
+
+        Brands = _context.Brands.ToList(),
+
+        Collections = _context.Collections.ToList(),
+
+        
+
+        Images = _context.ProductImages.ToList(),
+        // thêm này
+        CurrentPage = page,
+
+        TotalPages = (int)Math.Ceiling(
+            (double)totalItems / pageSize),
+
+        Keyword = keyword
     };
 
-        return View(model);
-    }
+    return View(model);
+}
 
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -288,6 +329,43 @@ public IActionResult AddCollection(string name, string season)
         }
         return RedirectToAction(nameof(Products));
     }
+
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult DeleteMultipleProducts(
+        [FromBody] List<int> ids)
+    {
+        var products =
+            _context.Products
+            .Where(x => ids.Contains(x.Id))
+            .ToList();
+
+        _context.Products.RemoveRange(products);
+
+        _context.SaveChanges();
+
+        return Ok();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult ProductDetail(int id)
+{
+    var product = _context.Products
+        .FirstOrDefault(x => x.Id == id);
+
+    if (product == null)
+    {
+        return RedirectToAction(nameof(Products));
+    }
+
+    ViewBag.Images = _context.ProductImages
+        .Where(x => x.ProductId == id)
+        .ToList();
+
+    return View(product);
+}
 
     [HttpPost]
     [ValidateAntiForgeryToken]

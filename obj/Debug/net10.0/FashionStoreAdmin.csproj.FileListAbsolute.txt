@@ -532,4 +532,5 @@ C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStor
 C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.genruntimeconfig.cache
 C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\ref\FashionStoreAdmin.dll
 C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\dnl89ppp48-{0}-niga04uct6-niga04uct6.gz
-C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\gbep3u2ta8-{0}-32yx3ulb97-32yx3ulb97.gz
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\FashionStoreAdmin.sourcelink.json
+C:\Users\Hue ngoc\Downloads\code\FashionStoreAdmin\obj\Debug\net10.0\compressed\gbep3u2ta8-{0}-1vjcytqy4y-1vjcytqy4y.gz

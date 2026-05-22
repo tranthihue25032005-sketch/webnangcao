@@ -29,6 +29,7 @@
             display: block; width: 100%; max-width: 400px; background-color: #FFF;
             margin: 0; padding: 2.25em; box-sizing: border-box; border: solid 1px #DDD; border-radius: .5em;
             font-family: 'Source Sans Pro', sans-serif;
+            position: relative; /* rất quan trọng */
         }
         form .svgContainer {
             position: relative; width: 200px; height: 200px; margin: 0 auto 1em;
@@ -98,6 +99,29 @@
             transform: translate(1.4em, 2.0em) scale(.65); opacity: 1;
         }
 
+        .row-inline {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .row-inline .stt {
+            min-width: 20px;
+            font-weight: bold;
+        }
+
+        .row-inline input {
+            flex: 1; /* input chiếm hết phần còn lại */
+        }
+        .stt-top {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            
+        }
+
         .show-pass {
             display: flex;
             align-items: center;
@@ -132,8 +156,11 @@
     <form asp-action="Login" method="post">
         @Html.AntiForgeryToken()
 
+        <span class="stt-top">5</span>
+
         <div class="svgContainer">
             <div>
+                
                 <svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
                     <defs>
                         <circle id="armMaskPath" cx="100" cy="100" r="100" />
@@ -230,20 +257,32 @@
 
         <div class="inputGroup inputGroup1">
             <label for="email">Email</label>
+            <div class="row-inline">
+            <span class="stt">1</span>
             <input type="text" id="email" name="Email" class="email" maxlength="256" value="@Model.Email" />
+            </div>
             <p class="helper helper1"></p>
             <span class="indicator"></span>
         </div>
         <div class="inputGroup inputGroup2">
             <label for="password">Password</label>
+            <div class="row-inline">
+            <span class="stt">2</span>
             <input type="password" id="password" name="Password" class="password" />
+            </div>
         </div>
         <label class="show-pass" for="showPassword">
+            <div class="row-inline">
+            <span class="stt">3</span>
             <input id="showPassword" type="checkbox" />
             Show password
+            </div>
         </label>
         <div class="inputGroup inputGroup3">
+            <div class="row-inline">
+            <span class="stt">4</span>
             <button id="login" type="submit">Log in</button>
+            </div>
         </div>
     </form>
 

@@ -40,7 +40,7 @@ public class AccountController : Controller
 
         if (employee == null)
         {
-            model.ErrorMessage = "Tài khoản không tồn tại hoặc đã bị khóa.";
+            model.ErrorMessage = "Sai tài khoản hoặc mật khẩu";
             return View(model);
         }
 
