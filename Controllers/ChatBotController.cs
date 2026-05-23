@@ -48,25 +48,59 @@ namespace FashionStoreAdmin.Controllers
         }
 
         private async Task<string> AskGemini(string prompt)
+{
+    var apiKey = "AIzaSyBELyy7eE6DicV30Vio-ZwHWdr3TQ1gOVU";
+
+    var url =
+$"https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key={apiKey}";
+
+    using var client = new HttpClient();
+
+    var body = new
+    {
+        contents = new[]
         {
-            var apiKey = "AIzaSyA49gSZbing8GS5dXNuoWHdSuv5QOAA_Oo"; 
-            var url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={apiKey}";
-
-            using var client = new HttpClient();
-            var body = new { contents = new[] { new { parts = new[] { new { text = "Bạn là chatbot bán hàng thời trang. Trả lời bằng tiếng Việt. Câu hỏi: " + prompt } } } } };
-            var content = new StringContent(JsonConvert.SerializeObject(body), Encoding.UTF8, "application/json");
-
-            try 
+            new
             {
-                var res = await client.PostAsync(url, content);
-                var json = await res.Content.ReadAsStringAsync();
-                if (!res.IsSuccessStatusCode) return "AI đang bận, bạn thử lại sau nhé!";
-                
-                dynamic result = JsonConvert.DeserializeObject(json);
-                return result.candidates[0].content.parts[0].text;
+                parts = new[]
+                {
+                    new
+                    {
+                        text = "Bạn là chatbot bán hàng thời trang. Trả lời bằng tiếng Việt. " + prompt
+                    }
+                }
             }
-            catch { return "Lỗi hệ thống!"; }
         }
+    };
+
+    var content = new StringContent(
+        JsonConvert.SerializeObject(body),
+        Encoding.UTF8,
+        "application/json");
+
+    try
+    {
+        var res = await client.PostAsync(url, content);
+
+        var json = await res.Content.ReadAsStringAsync();
+
+        // HIỆN LỖI THẬT
+        if (!res.IsSuccessStatusCode)
+        {
+            return json;
+        }
+
+        dynamic result =
+            JsonConvert.DeserializeObject(json);
+
+        return result.candidates[0]
+            .content.parts[0].text.ToString();
+    }
+    catch (Exception ex)
+    {
+        return ex.Message;
+    }
+}
     }
 
     // LỚP NÀY PHẢI NẰM Ở ĐÂY (Trong cùng Namespace)
