@@ -49,7 +49,7 @@ namespace FashionStoreAdmin.Controllers
 
         private async Task<string> AskGemini(string prompt)
 {
-    var apiKey = "AIzaSyAS0VgJYGOPbHYX-u-TcCM-1iYI-fDpOQU";
+    var apiKey = "AIzaSyDwjA1GUVg90PGISarHquDK5rCUKFLGJVA";
 
     var url =
 $"https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key={apiKey}";
